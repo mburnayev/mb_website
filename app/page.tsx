@@ -1,3 +1,15 @@
+"use client";
+import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import {
+  IconBrandGithub,
+  IconBrandX,
+  IconExchange,
+  IconHome,
+  IconNewSection,
+  IconTerminal2,
+} from "@tabler/icons-react";
 import Image from "next/image";
 
 export default function Home() {
