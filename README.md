@@ -3,8 +3,11 @@ This is a [Next.js](https://nextjs.org) project using [Tailwind CSS](https://tai
 This webpage was created to record my progression as a software developer and portfolio feats I have accomplished, including this project itself.
 
 ## Getting Started
-A development server for this project can be run using ```npm run dev``` and accessed on localhost:3000
+A development server for this project can be run using `npm run dev` and accessed on localhost:3000
 Edits to the page can be made by modifying `app/page.tsx`, which will hot reload on save.
+The app can also be run in Docker using the following commands:
+- `docker build --tag <image_name>:<version> .`
+- `docker run -p 3000:3000 <image_name>:<version>`
 
 ## Note
 I culled tailwind.config.js since it created resource pathfinding conflicts with its TS peer file
