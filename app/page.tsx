@@ -7,26 +7,30 @@ const resources = [
   {
     id: 1,
     name: "LinkedIn",
-    designation: "",
-    image: "https://cdn-icons-png.flaticon.com/256/3536/3536505.png"
+    designation: "Keeping it classy",
+    image: "https://cdn-icons-png.flaticon.com/256/3536/3536505.png",
+    href: "https://www.linkedin.com/in/misha-burnayev/"
   },
   {
     id: 2,
     name: "GitHub",
-    designation: "",
-    image: "https://cdn-icons-png.flaticon.com/256/733/733609.png"
+    designation: "Yeah, I code a little",
+    image: "https://cdn-icons-png.flaticon.com/256/733/733609.png",
+    href: "https://github.com/mburnayev"
   },
   {
     id: 3,
     name: "Discord",
-    designation: "Message",
-    image: "https://cdn-icons-png.flaticon.com/256/5968/5968756.png"
+    designation: "Q&A opens after 5pm",
+    image: "https://cdn-icons-png.flaticon.com/256/5968/5968756.png",
+    href: "https://discordapp.com/users/228204911098200064"
   },
   {
     id: 4,
     name: "Email",
-    designation: "",
-    image: "https://cdn-icons-png.flaticon.com/256/5968/5968534.png"
+    designation: "Infiltrate my inbox",
+    image: "https://cdn-icons-png.flaticon.com/256/5968/5968534.png",
+    href: "mailto:misha@burnayev.com"
   }
 ];
 
