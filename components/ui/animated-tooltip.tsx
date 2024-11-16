@@ -39,7 +39,6 @@ export const AnimatedTooltip = ({
     if (sfxCounter == 8) {
       sfxCounter = 0;
     }
-    var audio = new Audio(musicDict[sfxCounter % 8]);
     if (sfxCounter == 6) {
       confetti({ 
         particleCount: 100,
@@ -58,7 +57,8 @@ export const AnimatedTooltip = ({
         });
       }
     }
-    audio.play();
+    var audio = new Audio(musicDict[sfxCounter % 8]);
+    // audio.play();
     sfxCounter += 1;
   }
   const x = useMotionValue(0); // going to set this value on mouse move

@@ -37,9 +37,9 @@ const resources = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen">
+    <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[25%] bg-gray-100 dark:bg-gray-800 flex flex-col items-center pt-8 border-r border-gray-200 dark:border-gray-700">
+      <div className="w-[20%] bg-gray-100 dark:bg-gray-800 flex flex-col items-center pt-8 border-l border-gray-200 dark:border-gray-700">
         <Image
           src="/next.svg"
           alt="Next.js logo"
@@ -49,56 +49,50 @@ export default function Home() {
           className="dark:invert"
         />
         <div className="flex flex-col items-center justify-center mb-10 w-full">
+        <nav className="flex flex-col items-center">
+            <a href="#bigHello" className="text-lg hover:underline">Home</a>
+            <a href="#work" className="text-lg hover:underline">Work</a>
+            <a href="#projects" className="text-lg hover:underline">Projects</a>
+            <a href="#Resume" className="text-lg hover:underline">Resume</a>
+          </nav>
           <AnimatedTooltip items={resources} />
+         
         </div>
       </div>
 
+      {/* Main */}
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <Image
-            className="dark:invert"
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-            <li className="mb-2">
-              Get started by editing{" "}
-              <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-                app/page.tsx
-              </code>
-              .
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
+        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start overflow-y-auto max-h-[60vh] ml-[10%] mr-[10%]">
+          {/* <hr className="w-full border-t border-gray-300" /> */}
+          <h1 className="text-lg font-bold" id="bigHello">Hello !</h1>
+          <p className="text-2xl">
+            I'm Misha Burnayev, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
+            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, I like programming the most since it's an excellent medium for efficiently bringing ideas to life and at the end of development, I feel like I've created an extension of myself.<br></br><br></br>
+            I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or practicing/performing my hobbies.
+          </p>
+          <h6 className="w-full border-t border-gray-300" id="work" />
+          <p className="text-2xl">
+            ST Engineering iDirect
+            Software Engineering Intern	 May 2024 - August 2024
+            Lorem Ipsum
 
-          <div className="flex gap-4 items-center flex-col sm:flex-row">
-            <a
-              className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Image
-                className="dark:invert"
-                src="/vercel.svg"
-                alt="Vercel logomark"
-                width={20}
-                height={20}
-              />
-              Deploy now
-            </a>
-            <a
-              className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Read our docs
-            </a>
-          </div>
+            George Mason University
+            Undergraduate Research Assistant					May 2022 - May 2023
+            Lorem Ipsum
+
+            George Mason University
+            Undergraduate Teaching Assistant, Data Science			August 2022 - July 2024
+            Undergraduate Teaching Assistant, Computer Science	August 2021 - December 2023
+            Lorem Ipsum
+          </p>
+          <h6 className="w-full border-t border-gray-300" id="projects" />
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <h6 className="w-full border-t border-gray-300" id="Resume" />
+          <p className="text-2xl">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </main>
 
         {/* Footer */}
