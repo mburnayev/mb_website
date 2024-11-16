@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Image from "next/image";
 
@@ -38,7 +39,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
-      <div className="w-[300px] bg-gray-100 dark:bg-gray-800 flex flex-col items-center pt-8 border-r border-gray-200 dark:border-gray-700">
+      <div className="w-[25%] bg-gray-100 dark:bg-gray-800 flex flex-col items-center pt-8 border-r border-gray-200 dark:border-gray-700">
         <Image
           src="/next.svg"
           alt="Next.js logo"

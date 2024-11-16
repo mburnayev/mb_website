@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
+import confetti from "canvas-confetti";
+
 import {
   motion,
   useTransform,
@@ -9,6 +11,7 @@ import {
   useSpring,
 } from "framer-motion";
 
+var sfxCounter = 0;
 export const AnimatedTooltip = ({
   items,
 }: {
@@ -20,12 +23,43 @@ export const AnimatedTooltip = ({
     href: string;
   }[];
 }) => {
+  const musicDict: { [key: number]: string } = {
+    0: "/sfx/sfx_1.mp3",
+    1: "/sfx/sfx_2.mp3",
+    2: "/sfx/sfx_3.mp3",
+    3: "/sfx/sfx_4.mp3",
+    4: "/sfx/sfx_5.mp3",
+    5: "/sfx/sfx_6.mp3",
+    6: "/sfx/sfx_medium.mp3",
+    7: "/sfx/sfx_big.mp3",
+  }
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
-  const audioRef = useRef<HTMLAudioElement | null>(null);
-  var audio = new Audio("/sfx.mp3");
   const playSFX = () => {
-      audio.play();
+    if (sfxCounter == 8) {
+      sfxCounter = 0;
+    }
+    var audio = new Audio(musicDict[sfxCounter % 8]);
+    if (sfxCounter == 6) {
+      confetti({ 
+        particleCount: 100,
+        spread: 100,
+        startVelocity: 45,
+        origin: { x: 0.55, y: 0.6 }
+      });
+    }
+    else if (sfxCounter == 7) {
+      for(let i = 0; i < 3; i++){
+        confetti({ 
+          particleCount: 150,
+          spread: 360,
+          startVelocity: 60,
+          origin: { x: 0.55, y: 0.4 }
+        });
+      }
+    }
+    audio.play();
+    sfxCounter += 1;
   }
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip

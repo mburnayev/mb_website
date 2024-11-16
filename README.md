@@ -12,6 +12,8 @@ The app can also be run in Docker using the following commands:
 ## Note
 I culled tailwind.config.js since it created resource pathfinding conflicts with its TS peer file
 I downgraded the react and react-dom versions in packages.json since the framer-motion dependency isn't yet compatible with newer versions of React.js
+npm install --save canvas-confetti
+
 
 ## Learn More and Miscellaneous
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
