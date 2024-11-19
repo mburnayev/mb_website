@@ -39,32 +39,36 @@ export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[20%] bg-gray-100 dark:bg-gray-800 flex flex-col items-center pt-8 border-l border-gray-200 dark:border-gray-700">
-        <Image
-          src="/next.svg"
-          alt="Next.js logo"
-          width={60}
-          height={60}
-          priority
-          className="dark:invert"
-        />
-        <div className="flex flex-col items-center justify-center mb-10 w-full">
-        <nav className="flex flex-col items-center">
-            <a href="#bigHello" className="text-lg hover:underline">Home</a>
-            <a href="#work" className="text-lg hover:underline">Work</a>
-            <a href="#projects" className="text-lg hover:underline">Projects</a>
-            <a href="#Resume" className="text-lg hover:underline">Resume</a>
+      <div className="w-[20%] flex flex-col items-center pt-8 border-l">
+        <div className="mb-[50%]">
+          <Image
+            src="/images/temp.png"
+            alt="Next.js logo"
+            width={200}
+            height={200}
+            priority
+            className="dark:invert"
+          />
+        </div>
+
+        <div className="flex flex-col items-center mb-[50%] w-full">
+          <nav className="flex flex-col items-center">
+            <a href="#bigHello" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
+            <a href="#work" className="text-xl md:text-2xl hover:underline mb-4">Work</a>
+            <a href="#projects" className="text-xl md:text-2xl hover:underline mb-4">Projects</a>
+            <a href="#Resume" className="text-xl md:text-2xl hover:underline mb-4">Resume</a>
           </nav>
+        </div>
+
+        <div>
           <AnimatedTooltip items={resources} />
-         
         </div>
       </div>
 
       {/* Main */}
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start overflow-y-auto max-h-[60vh] ml-[10%] mr-[10%]">
-          {/* <hr className="w-full border-t border-gray-300" /> */}
-          <h1 className="text-lg font-bold" id="bigHello">Hello !</h1>
+          <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)]" id="bigHello">Hello </h1>
           <p className="text-2xl">
             I'm Misha Burnayev, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
             I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, I like programming the most since it's an excellent medium for efficiently bringing ideas to life and at the end of development, I feel like I've created an extension of myself.<br></br><br></br>

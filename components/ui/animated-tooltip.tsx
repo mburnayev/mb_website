@@ -57,7 +57,7 @@ export const AnimatedTooltip = ({
         });
       }
     }
-    var audio = new Audio(musicDict[sfxCounter % 8]);
+    // var audio = new Audio(musicDict[sfxCounter % 8]);
     // audio.play();
     sfxCounter += 1;
   }
