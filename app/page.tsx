@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
-import { FloatingDock } from "@/components/ui/floating-dock";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import Image from "next/image";
 
@@ -37,9 +38,10 @@ const resources = [
 
 export default function Home() {
   return (
+    // <BackgroundGradientAnimation>
     <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[20%] flex flex-col items-center pt-8 border-l">
+      <div className="w-[20%] flex flex-col items-center pt-8 border-l fixed h-full">
         <div className="mb-[50%]">
           <Image
             src="/images/temp.png"
@@ -67,7 +69,7 @@ export default function Home() {
 
       {/* Main */}
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start overflow-y-auto max-h-[60vh] ml-[10%] mr-[10%]">
+        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start ml-[10%] mr-[30%]">
           <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)]" id="bigHello">Hello </h1>
           <p className="text-2xl">
             I'm Misha Burnayev, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
@@ -135,5 +137,6 @@ export default function Home() {
 
       </div>
     </div>
+    // </BackgroundGradientAnimation>
   );
 }
