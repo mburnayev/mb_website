@@ -1,11 +1,10 @@
 "use client";
 import React from "react";
-import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
-
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 import Image from "next/image";
 
-const resources = [
+const tooltipLinks = [
   {
     id: 1,
     name: "LinkedIn",
@@ -36,16 +35,63 @@ const resources = [
   }
 ];
 
+const workCards = [
+  {
+    title: "Software Engineering Intern @ ST Engineering iDirect",
+    subtext: "May 2024 - August 2024",
+    description: "Lorem Ipsum",
+    link: "https://www.idirect.net/"
+  },
+  {
+    title: "Undergraduate Research Assistant @ George Mason University",
+    subtext: "May 2022 - May 2023",
+    description: "Lorem Ipsum",
+    link: "https://sparx.vse.gmu.edu/"
+  },
+  {
+    title: "DS Undergraduate Teaching Assistant @ George Mason University",
+    subtext: "August 2022 - July 2024",
+    description: "Lorem Ipsum",
+    link: "https://science.gmu.edu/academics/departments-units/computational-data-sciences"
+  },
+  {
+    title: "CS Undergraduate Teaching Assistant @ George Mason University",
+    subtext: "August 2021 - December 2023",
+    description: "Lorem Ipsum",
+    link: "https://cs.gmu.edu/"
+  },
+]
+
+const projectCards = [
+  {
+    title: "CatFinderinator3000",
+    subtext: "Lorem Ipsum",
+    description: "Lorem Ipsum",
+    link: "https://github.com/mburnayev/CatFinderinator3000"
+  },
+  {
+    title: "IFGDB",
+    subtext: "Lorem Ipsum",
+    description: "Lorem Ipsum",
+    link: "https://github.com/mburnayev/IFGDBot"
+  },
+  {
+    title: "This website",
+    subtext: "Lorem Ipsum",
+    description: "Lorem Ipsum",
+    link: "https://github.com/mburnayev/mb_website"
+  },
+]
+
 export default function Home() {
   return (
-    // <BackgroundGradientAnimation>
     <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[20%] flex flex-col items-center pt-8 border-l fixed h-full">
+      <div className="w-[20%] flex flex-col items-center pt-8 fixed h-full">
         <div className="mb-[50%]">
           <Image
-            src="/images/temp.png"
-            alt="Next.js logo"
+            src="/images/pic.png"
+            alt="I'm walkin' here!"
             width={200}
             height={200}
             priority
@@ -55,7 +101,7 @@ export default function Home() {
 
         <div className="flex flex-col items-center mb-[50%] w-full">
           <nav className="flex flex-col items-center">
-            <a href="#bigHello" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
+            <a href="#about" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
             <a href="#work" className="text-xl md:text-2xl hover:underline mb-4">Work</a>
             <a href="#projects" className="text-xl md:text-2xl hover:underline mb-4">Projects</a>
             <a href="#Resume" className="text-xl md:text-2xl hover:underline mb-4">Resume</a>
@@ -63,38 +109,24 @@ export default function Home() {
         </div>
 
         <div>
-          <AnimatedTooltip items={resources} />
+          <AnimatedTooltip items={tooltipLinks} />
         </div>
       </div>
 
       {/* Main */}
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start ml-[10%] mr-[30%]">
-          <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)]" id="bigHello">Hello </h1>
+          <h1 id="about"></h1>
+          <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)]">Hello</h1>
           <p className="text-2xl">
             I'm Misha Burnayev, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
             I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, I like programming the most since it's an excellent medium for efficiently bringing ideas to life and at the end of development, I feel like I've created an extension of myself.<br></br><br></br>
             I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or practicing/performing my hobbies.
           </p>
           <h6 className="w-full border-t border-gray-300" id="work" />
-          <p className="text-2xl">
-            ST Engineering iDirect
-            Software Engineering Intern	 May 2024 - August 2024
-            Lorem Ipsum
-
-            George Mason University
-            Undergraduate Research Assistant					May 2022 - May 2023
-            Lorem Ipsum
-
-            George Mason University
-            Undergraduate Teaching Assistant, Data Science			August 2022 - July 2024
-            Undergraduate Teaching Assistant, Computer Science	August 2021 - December 2023
-            Lorem Ipsum
-          </p>
+          <HoverEffect className="mx-auto" items={workCards} />
           <h6 className="w-full border-t border-gray-300" id="projects" />
-          <p className="text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
+          <HoverEffect className="mx-auto" items={projectCards} />
           <h6 className="w-full border-t border-gray-300" id="Resume" />
           <p className="text-2xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -103,40 +135,10 @@ export default function Home() {
 
         {/* Footer */}
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/file.svg"
-              alt="File icon"
-              width={16}
-              height={16}
-            />
-            Learn
-          </a>
-          <a
-            className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              aria-hidden
-              src="/window.svg"
-              alt="Window icon"
-              width={16}
-              height={16}
-            />
-            Examples
-          </a>
+          <p>Built with Next.js and Tailwind CSS, to be deployed on Firebase</p>
         </footer>
 
       </div>
     </div>
-    // </BackgroundGradientAnimation>
   );
 }

@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
     // the aforementioned errors
     ignoreDuringBuilds: true
   },
-  output: "standalone"
+  output: "export"
 };
 
 export default nextConfig;
