@@ -11,6 +11,9 @@ This is a [Next.js](https://nextjs.org) project using [Tailwind CSS](https://tai
 - Firebase Hosting
 - Google Admin
 - Google Cloud Platform
+- Oracle Cloud Infrastructure
+- Oracle Cloud Compute
+- Nginx
 
 ## Project Timeline
 Task | Notes | Done?
@@ -22,8 +25,8 @@ Create new Firebase project for hosting | - | ✅
 Link codebase to Firebase project | "HTTP Error: 400, Key creation is not allowed on this service account." | ❎
 Amend service account key creation policy for my project in GCP | - | ✅
 Link codebase to Firebase project | GitHub workflows added as well | ✅
-Add resume to Firebase | Maybe also use cloud storage? in progress | -
-Add link to redirect to my resume on website | in progress | -
+Add resume to Firebase | ~~Maybe use Cloud Storage~~ Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance | ✅
+Add link to redirect to my resume on website | - | ✅
 Find nice components to add to website where necessary | in progress | -
 Make UI generally more appealing | in progress | -
 Create switch to turn on the funk | - | -
