@@ -129,7 +129,7 @@ export default function Home() {
           <HoverEffect className="mx-auto" items={projectCards} />
           <h6 className="w-full border-t border-gray-300" id="Resume" />
           <p className="text-2xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <a href="http://150.136.52.185/">Resume</a>
           </p>
         </main>
 
