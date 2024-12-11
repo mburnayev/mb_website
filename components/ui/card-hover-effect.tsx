@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { LogoButton } from "./logo-button";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -12,6 +13,7 @@ export const HoverEffect = ({
     subtext: string;
     description: string;
     link: string;
+    skillIcons: { name: string; bgcolor: string; txcolor: string; icon: string; }[];
   }[];
   className?: string;
 }) => {
@@ -53,6 +55,7 @@ export const HoverEffect = ({
             <CardTitle>{item.title}</CardTitle>
             <CardSubtext>{item.subtext}</CardSubtext>
             <CardDescription>{item.description}</CardDescription>
+            <LogoButton items={item.skillIcons} />
           </Card>
         </Link>
       ))}
@@ -70,7 +73,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -88,7 +91,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-black-100 font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -102,7 +105,7 @@ export const CardSubtext = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h6 className={cn("text-zinc-100 tracking-wide mt-4", className)}>
+    <h6 className={cn("text-black-100 tracking-wide mt-4", className)}>
       {children}
     </h6>
   );
@@ -118,7 +121,25 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-black-400 tracking-wide leading-relaxed text-sm",
+        className
+      )}
+    >
+      {children}
+    </p>
+  );
+};
+
+export const CardSkillIcons = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <p
+      className={cn(
         className
       )}
     >
