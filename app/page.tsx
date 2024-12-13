@@ -48,34 +48,34 @@ const researchButtons = [
   {
     name: "C++",
     bgcolor: "#8BB6E4",
-    txcolor: "#004482",
+    txcolor: "#000000",
     icon: "/images/cpp_logo.png"
   },
   {
     name: "Python",
-    bgcolor: "#646464",
-    txcolor: "FFDE57",
+    bgcolor: "#A8A8A8",
+    txcolor: "#000000",
     icon: "/images/python_logo.svg"
+  },
+  {
+    name: "OpenMV",
+    bgcolor: "#9cc4ed",
+    txcolor: "#000000",
+    icon: "/images/openmv_logo.png"
   },
   {
     name: "OpenCV",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
     icon: "/images/opencv_logo.webp"
-  },
-  {
-    name: "OpenMV",
-    bgcolor: "#649CD4",
-    txcolor: "#3F7FBF",
-    icon: "/images/openmv_logo.png"
-  },
+  }
 ]
 
 const DSButtons = [
   {
     name: "Python",
-    bgcolor: "#646464",
-    txcolor: "FFDE57",
+    bgcolor: "#A8A8A8",
+    txcolor: "#000000",
     icon: "/images/python_logo.svg"
   },
   {
@@ -89,14 +89,14 @@ const DSButtons = [
 const CSButtons = [
   {
     name: "Python",
-    bgcolor: "#646464",
-    txcolor: "FFDE57",
+    bgcolor: "#A8A8A8",
+    txcolor: "#000000",
     icon: "/images/python_logo.svg"
   },
   {
     name: "Java",
-    bgcolor: "#755176",
-    txcolor: "EA2D2E",
+    bgcolor: "#A8A8A8",
+    txcolor: "#000000",
     icon: "/images/java_logo.png"
   },
   {
@@ -110,37 +110,37 @@ const CSButtons = [
 const CF3KButtons = [
   {
     name: "Dart",
-    bgcolor: "#339933",
+    bgcolor: "#76F4E2",
     txcolor: "#000000",
     icon: "/images/dart_logo.png"
   },
   {
     name: "Flutter",
-    bgcolor: "#02569B",
+    bgcolor: "#B2E8FF",
     txcolor: "#000000",
-    icon: "/images/flutter_logo.png"
+    icon: "/images/flutter_logo.webp"
   },
   {
     name: "Python",
-    bgcolor: "#3776AB",
+    bgcolor: "#A8A8A8",
     txcolor: "#000000",
     icon: "/images/python_logo.svg"
   },
   {
     name: "PyTorch",
-    bgcolor: "#3776AB",
+    bgcolor: "#D5A9A0",
     txcolor: "#000000",
     icon: "/images/pytorch_logo.webp"
   },
   {
     name: "OpenCV",
-    bgcolor: "#FF0000",
+    bgcolor: "#A8A8A8",
     txcolor: "#000000",
     icon: "/images/opencv_logo.webp"
   },
   {
     name: "Firebase",
-    bgcolor: "#FFCA28",
+    bgcolor: "#FFDC68",
     txcolor: "#000000",
     icon: "/images/firebase_logo.png"
   },
@@ -161,25 +161,25 @@ const websiteButtons = [
   },
   {
     name: "TypeScript",
-    bgcolor: "#3178C6",
+    bgcolor: "#73A5DD",
     txcolor: "#000000",
     icon: "/images/typescript_logo.png"
   },
   {
     name: "HTML",
-    bgcolor: "#3178C6",
+    bgcolor: "#D5A9A0",
     txcolor: "#000000",
     icon: "/images/html_logo.webp"
   },
   {
     name: "Tailwind CSS",
-    bgcolor: "#3178C6",
+    bgcolor: "#A2E3FF",
     txcolor: "#000000",
     icon: "/images/tailwind_logo.png"
   },
   {
-    name: "Node.js",
-    bgcolor: "#339933",
+    name: "Node.JS",
+    bgcolor: "#CAE79D",
     txcolor: "#000000",
     icon: "/images/nodejs_logo.webp"
   },
@@ -212,18 +212,18 @@ const websiteButtons = [
 const IFGDBButtons = [
   {
     name: "JavaScript",
-    bgcolor: "#FFDF1E",
+    bgcolor: "#FFEF84",
     txcolor: "#000000",
     icon: "/images/javascript_logo.png"
   },
   {
     name: "Discord API",
-    bgcolor: "#FFDF1E",
+    bgcolor: "#9DA5FF",
     txcolor: "#000000",
     icon: "/images/discord_logo.png"
   },
   {
-    name: "Node.js",
+    name: "Node.JS",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
     icon: "/images/nodejs_logo.webp"
