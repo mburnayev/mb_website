@@ -27,7 +27,7 @@ Amend service account key creation policy for my project in GCP | - | ✅
 Link codebase to Firebase project | GitHub workflows added as well | ✅
 Add resume to Firebase | ~~Maybe use Cloud Storage~~ Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance | ✅
 Add link to redirect to my resume on website | - | ✅
-Fill in descriptions for experience |  | ✅
+Fill in descriptions for experience | - | ✅
 Make UX generally more appealing, fix UI | in progress | -
 Create switch to turn on the funk | in progress | -
 Copy over existing resume logic as base for funky version | - | -
@@ -35,6 +35,7 @@ Rework funky website accordingly | - | -
 Do some testing on different browsers | - | -
 Deploy website | - | ✅
 Fix website deployment | it's publicly available, but I get an incompatible Node version error? | -
+Add vanity URL | - | -
 
 ## Note
 A development server for this project can be run using `npm run dev` and accessed on localhost:3000
