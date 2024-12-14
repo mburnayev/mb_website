@@ -39,8 +39,26 @@ const iDirectButtons = [
   {
     name: "C++",
     bgcolor: "#8BB6E4",
-    txcolor: "#004482",
+    txcolor: "#000000",
     icon: "/images/cpp_logo.png"
+  },
+  {
+    name: "Git",
+    bgcolor: "#FFA79A",
+    txcolor: "#000000",
+    icon: "/images/git_logo.png"
+  },
+  {
+    name: "Jenkins",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "/images/jenkins_logo.png"
+  },
+  {
+    name: "Docker",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "/images/docker_logo.webp"
   }
 ]
 
@@ -139,6 +157,12 @@ const CF3KButtons = [
     icon: "/images/opencv_logo.webp"
   },
   {
+    name: "Git",
+    bgcolor: "#FFA79A",
+    txcolor: "#000000",
+    icon: "/images/git_logo.png"
+  },
+  {
     name: "Firebase",
     bgcolor: "#FFDC68",
     txcolor: "#000000",
@@ -176,6 +200,12 @@ const websiteButtons = [
     bgcolor: "#A2E3FF",
     txcolor: "#000000",
     icon: "/images/tailwind_logo.png"
+  },
+  {
+    name: "Git",
+    bgcolor: "#FFA79A",
+    txcolor: "#000000",
+    icon: "/images/git_logo.png"
   },
   {
     name: "Node.JS",
@@ -223,6 +253,12 @@ const IFGDBButtons = [
     icon: "/images/discord_logo.png"
   },
   {
+    name: "Git",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "/images/git_logo.png"
+  },
+  {
     name: "Node.JS",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
@@ -234,28 +270,28 @@ const workCards = [
   {
     title: "Software Engineering Intern @ ST Engineering iDirect",
     subtext: "May 2024 - August 2024",
-    description: "Lorem Ipsum",
+    description: "Co-developed and tested a C++ port of an important debugging script that retrieved many proprietary FPGA module statistics and integrated it into a larger command library.\n\nAfter the port, I revised a major product line's client-facing UI to permit DVB-S2X configurability and tied it to the provisioning service — the update was thouroughly tested and integrated into the product line.",
     link: "https://www.idirect.net/",
     skillIcons: iDirectButtons
   },
   {
     title: "Undergraduate Research Assistant @ George Mason University",
     subtext: "May 2022 - May 2023",
-    description: "Lorem Ipsum",
+    description: "Co-developed a C++ socket program that livestreamed what remotely controlled blimps perceived to our ground control setup so we could monitor the performance of our team's YOLO object detector's performance.\n\nExperimented with models using Edge Impluse's FOMO object detection algorithm and independently developed light detection methods as alternative means to achieve object detection on autonomous agents with embedded systems.",
     link: "https://sparx.vse.gmu.edu/",
     skillIcons: researchButtons
   },
   {
     title: "DS Undergraduate Teaching Assistant @ George Mason University",
     subtext: "August 2022 - July 2024",
-    description: "Lorem Ipsum",
+    description: "Handled in-person and remote instruction and assistance, and grading for CDS-102 and CDS-230.",
     link: "https://science.gmu.edu/academics/departments-units/computational-data-sciences",
     skillIcons: DSButtons
   },
   {
     title: "CS Undergraduate Teaching Assistant @ George Mason University",
     subtext: "August 2021 - December 2023",
-    description: "Lorem Ipsum",
+    description: "Handled in-person and remote instruction and assistance, and grading for CS-112, CS-211, CS-262, and CS-306.",
     link: "https://cs.gmu.edu/",
     skillIcons: CSButtons
   },
@@ -263,23 +299,23 @@ const workCards = [
 
 const projectCards = [
   {
-    title: "CatFinderinator3000",
-    subtext: "August - October 2024, November - December 2024 ",
-    description: "Lorem Ipsum",
-    link: "https://github.com/mburnayev/CatFinderinator3000",
-    skillIcons: CF3KButtons
-  },
-  {
-    title: "This website",
-    subtext: "November 2024 - Present",
-    description: "Lorem Ipsum",
+    title: "mburnayev-website",
+    subtext: "November 2024 - December 2024",
+    description: "*This* website — as you can probably tell, this primarily serves as a portfolio of my career experiences.\n\nDesigned with Next to use some of the pre-built components that looked cool, but I expanded the project scope to get the functionality I wanted as this project was made under a Google organization and Firebase changed their free tier policies.",
     link: "https://github.com/mburnayev/mb_website",
     skillIcons: websiteButtons
   },
   {
-    title: "IFGDB",
+    title: "CatFinderinator3000",
+    subtext: "August - October 2024, November - December 2024 ",
+    description: "A multidiscipline project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
+    link: "https://github.com/mburnayev/CatFinderinator3000",
+    skillIcons: CF3KButtons
+  },
+  {
+    title: "IFGDB (Intrusive Family Guy Discord Bot)",
     subtext: "October 2024",
-    description: "Lorem Ipsum",
+    description: "This was a quick (but fully functional) project I made in a weekend after a friend jokingly suggested it — it's a Discord bot that automatically connects to a voice chat if a user joins, plays a short audio clip from Family Guy, and disconnects.",
     link: "https://github.com/mburnayev/IFGDBot",
     skillIcons: IFGDBButtons
   },
@@ -289,8 +325,8 @@ export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[20%] flex flex-col items-center pt-8 fixed h-full">
-        <div className="mb-[50%]">
+      <div className="w-[20%] min-w-[200px] flex flex-col items-center pt-8 fixed right-0 h-screen overflow-y-auto bg-white dark:bg-black">
+        <div className="mb-8">
           <Image
             src="/images/pic.png"
             alt="I'm walkin' here!"
@@ -334,10 +370,9 @@ export default function Home() {
           <HoverEffect className="mx-auto" items={workCards} />
           <h6 className="w-full border-t border-gray-300" id="projects" />
           <HoverEffect className="mx-auto" items={projectCards} />
-          {/* <LogoButton items={testButtons} /> */}
           <h6 className="w-full border-t border-gray-300" id="Resume" />
           <p className="text-2xl">
-            <a href="http://150.136.52.185/">Resume</a>
+            <a href="http://150.136.52.185/" target="_blank">Resume</a>
           </p>
         </main>
 

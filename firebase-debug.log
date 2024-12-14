@@ -1,34 +1,31 @@
-[debug] [2024-12-11T22:10:43.547Z] ----------------------------------------------------------------------
-[debug] [2024-12-11T22:10:43.549Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
-[debug] [2024-12-11T22:10:43.549Z] CLI Version:   13.28.0
-[debug] [2024-12-11T22:10:43.550Z] Platform:      darwin
-[debug] [2024-12-11T22:10:43.550Z] Node Version:  v18.5.0
-[debug] [2024-12-11T22:10:43.555Z] Time:          Wed Dec 11 2024 17:10:43 GMT-0500 (Eastern Standard Time)
-[debug] [2024-12-11T22:10:43.556Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T05:48:02.221Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T05:48:02.223Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-12-14T05:48:02.224Z] CLI Version:   13.29.0
+[debug] [2024-12-14T05:48:02.224Z] Platform:      darwin
+[debug] [2024-12-14T05:48:02.224Z] Node Version:  v18.5.0
+[debug] [2024-12-14T05:48:02.228Z] Time:          Sat Dec 14 2024 00:48:02 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-14T05:48:02.228Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-12-11T22:10:43.562Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2024-12-11T22:10:43.714Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-12-11T22:10:43.715Z] > authorizing via signed-in user (misha@burnayev.com)
-[debug] [2024-12-11T22:10:43.716Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-12-11T22:10:43.717Z] Checked if tokens are valid: false, expires at: 1733755310159
-[debug] [2024-12-11T22:10:43.718Z] Checked if tokens are valid: false, expires at: 1733755310159
-[debug] [2024-12-11T22:10:43.718Z] > refreshing access token with scopes: []
-[debug] [2024-12-11T22:10:43.719Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
-[debug] [2024-12-11T22:10:43.720Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-12-11T22:10:43.870Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-12-11T22:10:43.873Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
-[debug] [2024-12-11T22:10:43.900Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
-[debug] [2024-12-11T22:10:43.903Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
-[debug] [2024-12-11T22:10:43.916Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
-[debug] [2024-12-11T22:10:43.916Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
-[debug] [2024-12-11T22:10:43.916Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-12-11T22:10:44.100Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
-[debug] [2024-12-11T22:10:44.101Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-12-11T22:10:44.102Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:10:44.102Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:10:44.102Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
-[debug] [2024-12-11T22:10:44.505Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
-[debug] [2024-12-11T22:10:44.506Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
+[debug] [2024-12-14T05:48:02.401Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-14T05:48:02.403Z] > authorizing via signed-in user (misha@burnayev.com)
+[debug] [2024-12-14T05:48:02.404Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-14T05:48:02.407Z] Checked if tokens are valid: false, expires at: 1734122520914
+[debug] [2024-12-14T05:48:02.408Z] Checked if tokens are valid: false, expires at: 1734122520914
+[debug] [2024-12-14T05:48:02.409Z] > refreshing access token with scopes: []
+[debug] [2024-12-14T05:48:02.412Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-12-14T05:48:02.414Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-14T05:48:02.626Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-12-14T05:48:02.628Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-12-14T05:48:02.647Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
+[debug] [2024-12-14T05:48:02.650Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
+[debug] [2024-12-14T05:48:02.650Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T05:48:02.821Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
+[debug] [2024-12-14T05:48:02.825Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T05:48:02.827Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:48:02.827Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:48:02.827Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
+[debug] [2024-12-14T05:48:03.408Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
+[debug] [2024-12-14T05:48:03.408Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
 [info] 
    Thank you for trying our early preview of Next.js support on Firebase Hosting.
    During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
@@ -39,39 +36,39 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
-[debug] [2024-12-11T22:10:52.774Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:10:52.775Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:10:52.775Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
-[debug] [2024-12-11T22:10:53.199Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
-[debug] [2024-12-11T22:10:53.203Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
+[debug] [2024-12-14T05:48:16.100Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:48:16.105Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:48:16.105Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
+[debug] [2024-12-14T05:48:16.629Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
+[debug] [2024-12-14T05:48:16.635Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
 [info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.18.0 is required.
 
-[debug] [2024-12-11T22:10:53.675Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
+[debug] [2024-12-14T05:48:17.179Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
 [error] 
 [error] Error: An unexpected error has occurred.
-[debug] [2024-12-11T22:13:01.316Z] ----------------------------------------------------------------------
-[debug] [2024-12-11T22:13:01.318Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
-[debug] [2024-12-11T22:13:01.318Z] CLI Version:   13.28.0
-[debug] [2024-12-11T22:13:01.319Z] Platform:      darwin
-[debug] [2024-12-11T22:13:01.319Z] Node Version:  v18.5.0
-[debug] [2024-12-11T22:13:01.323Z] Time:          Wed Dec 11 2024 17:13:01 GMT-0500 (Eastern Standard Time)
-[debug] [2024-12-11T22:13:01.323Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T05:57:25.485Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T05:57:25.487Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-12-14T05:57:25.487Z] CLI Version:   13.29.0
+[debug] [2024-12-14T05:57:25.488Z] Platform:      darwin
+[debug] [2024-12-14T05:57:25.488Z] Node Version:  v18.5.0
+[debug] [2024-12-14T05:57:25.489Z] Time:          Sat Dec 14 2024 00:57:25 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-14T05:57:25.489Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-12-11T22:13:01.440Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-12-11T22:13:01.441Z] > authorizing via signed-in user (misha@burnayev.com)
-[debug] [2024-12-11T22:13:01.442Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-12-11T22:13:01.445Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:01.446Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:01.447Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
-[debug] [2024-12-11T22:13:01.448Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
-[debug] [2024-12-11T22:13:01.449Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-12-11T22:13:01.637Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
-[debug] [2024-12-11T22:13:01.640Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-12-11T22:13:01.641Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:01.641Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:01.641Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
-[debug] [2024-12-11T22:13:02.150Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
-[debug] [2024-12-11T22:13:02.152Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
+[debug] [2024-12-14T05:57:25.666Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-14T05:57:25.667Z] > authorizing via signed-in user (misha@burnayev.com)
+[debug] [2024-12-14T05:57:25.668Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-14T05:57:25.670Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:25.671Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:25.674Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
+[debug] [2024-12-14T05:57:25.675Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
+[debug] [2024-12-14T05:57:25.675Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T05:57:25.904Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
+[debug] [2024-12-14T05:57:25.908Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T05:57:25.910Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:25.912Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:25.914Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
+[debug] [2024-12-14T05:57:26.321Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
+[debug] [2024-12-14T05:57:26.325Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
 [info] 
    Thank you for trying our early preview of Next.js support on Firebase Hosting.
    During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
@@ -82,13 +79,142 @@
 
    We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
 
-[debug] [2024-12-11T22:13:10.344Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:10.345Z] Checked if tokens are valid: true, expires at: 1733958642903
-[debug] [2024-12-11T22:13:10.345Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
-[debug] [2024-12-11T22:13:10.753Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
-[debug] [2024-12-11T22:13:10.756Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
+[debug] [2024-12-14T05:57:39.181Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:39.185Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T05:57:39.186Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
+[debug] [2024-12-14T05:57:39.828Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
+[debug] [2024-12-14T05:57:39.833Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
 [info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.18.0 is required.
 
-[debug] [2024-12-11T22:13:11.234Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
+[debug] [2024-12-14T05:57:40.371Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-12-14T06:00:47.511Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T06:00:47.513Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-12-14T06:00:47.514Z] CLI Version:   13.29.0
+[debug] [2024-12-14T06:00:47.514Z] Platform:      darwin
+[debug] [2024-12-14T06:00:47.515Z] Node Version:  v18.5.0
+[debug] [2024-12-14T06:00:47.516Z] Time:          Sat Dec 14 2024 01:00:47 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-14T06:00:47.516Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-14T06:00:47.684Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-14T06:00:47.685Z] > authorizing via signed-in user (misha@burnayev.com)
+[debug] [2024-12-14T06:00:47.687Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-14T06:00:47.688Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:00:47.690Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:00:47.692Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
+[debug] [2024-12-14T06:00:47.692Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
+[debug] [2024-12-14T06:00:47.693Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:00:47.959Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
+[debug] [2024-12-14T06:00:47.963Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:00:47.965Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:00:47.968Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:00:47.969Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
+[debug] [2024-12-14T06:00:48.450Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
+[debug] [2024-12-14T06:00:48.453Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-12-14T06:01:00.918Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:01:00.923Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:01:00.923Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
+[debug] [2024-12-14T06:01:01.159Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
+[debug] [2024-12-14T06:01:01.165Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.18.0 is required.
+
+[debug] [2024-12-14T06:01:01.716Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-12-14T06:02:20.101Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T06:02:20.103Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-12-14T06:02:20.104Z] CLI Version:   13.29.0
+[debug] [2024-12-14T06:02:20.104Z] Platform:      darwin
+[debug] [2024-12-14T06:02:20.104Z] Node Version:  v18.5.0
+[debug] [2024-12-14T06:02:20.108Z] Time:          Sat Dec 14 2024 01:02:20 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-14T06:02:20.108Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-14T06:02:20.278Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-14T06:02:20.280Z] > authorizing via signed-in user (misha@burnayev.com)
+[debug] [2024-12-14T06:02:20.281Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-14T06:02:20.284Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:20.285Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:20.287Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
+[debug] [2024-12-14T06:02:20.288Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
+[debug] [2024-12-14T06:02:20.288Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:02:20.559Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
+[debug] [2024-12-14T06:02:20.563Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:02:20.565Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:20.567Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:20.568Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
+[debug] [2024-12-14T06:02:20.917Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
+[debug] [2024-12-14T06:02:20.920Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-12-14T06:02:33.302Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:33.307Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:02:33.307Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
+[debug] [2024-12-14T06:02:33.653Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
+[debug] [2024-12-14T06:02:33.659Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.18.0 is required.
+
+[debug] [2024-12-14T06:02:34.205Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-12-14T06:03:55.838Z] ----------------------------------------------------------------------
+[debug] [2024-12-14T06:03:55.840Z] Command:       /usr/local/bin/firebase /Users/m-home/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2024-12-14T06:03:55.840Z] CLI Version:   13.29.0
+[debug] [2024-12-14T06:03:55.841Z] Platform:      darwin
+[debug] [2024-12-14T06:03:55.841Z] Node Version:  v18.5.0
+[debug] [2024-12-14T06:03:55.842Z] Time:          Sat Dec 14 2024 01:03:55 GMT-0500 (Eastern Standard Time)
+[debug] [2024-12-14T06:03:55.843Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-14T06:03:56.016Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-14T06:03:56.017Z] > authorizing via signed-in user (misha@burnayev.com)
+[debug] [2024-12-14T06:03:56.019Z] [iam] checking project mburnayev-website for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-12-14T06:03:56.021Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:03:56.022Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:03:56.024Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions [none]
+[debug] [2024-12-14T06:03:56.024Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions x-goog-quota-user=projects/mburnayev-website
+[debug] [2024-12-14T06:03:56.025Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:03:56.232Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions 200
+[debug] [2024-12-14T06:03:56.234Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mburnayev-website:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-12-14T06:03:56.236Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:03:56.238Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:03:56.239Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website [none]
+[debug] [2024-12-14T06:03:56.568Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website 200
+[debug] [2024-12-14T06:03:56.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mburnayev-website {"projectId":"mburnayev-website","projectNumber":"406780697459","displayName":"mburnayev-website","name":"projects/mburnayev-website","resources":{"hostingSite":"mburnayev-website"},"state":"ACTIVE","etag":"1_a2c3752e-de81-4d43-a1c4-3294857681e8"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2024-12-14T06:04:09.086Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:04:09.091Z] Checked if tokens are valid: true, expires at: 1734158881628
+[debug] [2024-12-14T06:04:09.092Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website [none]
+[debug] [2024-12-14T06:04:10.288Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website 200
+[debug] [2024-12-14T06:04:10.293Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/mburnayev-website/sites/mburnayev-website {"name":"projects/mburnayev-website/sites/mburnayev-website","defaultUrl":"https://mburnayev-website.web.app","appId":"1:406780697459:web:674d0bb7aac8cf29a28306","type":"DEFAULT_SITE"}
+[info] You are using Node.js 18.5.0. For Next.js, Node.js version >= v18.18.0 is required.
+
+[debug] [2024-12-14T06:04:10.815Z] Error: ENOENT: no such file or directory, open '/Users/m-home/Documents/mb_website/.next/export-marker.json'
 [error] 
 [error] Error: An unexpected error has occurred.

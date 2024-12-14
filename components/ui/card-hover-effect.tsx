@@ -27,7 +27,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
+        <Link target="_blank"
           href={item?.link}
           key={item?.link}
           className="relative group block p-2 h-full w-full"
@@ -121,7 +121,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-black-400 tracking-wide leading-relaxed text-sm",
+        "mt-8 text-black-400 tracking-wide leading-relaxed text-sm whitespace-pre-line",
         className
       )}
     >
