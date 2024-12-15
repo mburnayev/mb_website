@@ -85,7 +85,7 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item) => (
         <div
-          className="-mr-4  relative group"
+          className="-mr-4 mb-1 relative group"
           key={item.name}
           onMouseEnter={() => {setHoveredIndex(item.id), playSFX()}}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -132,7 +132,7 @@ export const AnimatedTooltip = ({
               width={100}
               src={item.image}
               alt={item.name}
-              className="object-cover !m-0 !p-0 object-top rounded-full h-[5vw] w-[5vw] min-h-[40px] min-w-[40px] max-h-[65px] max-w-[65px] border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
+              className="!m-0 !p-0 rounded-full h-[3.5vw] w-[3.5vw] group-hover:z-30 relative transition duration-500 object-contain"
             />
           </div>
         </div>

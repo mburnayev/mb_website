@@ -331,8 +331,11 @@ const projectCards = [
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen flex-row-reverse">
+      {/* Vertical Divider */}
+      <div className="fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
+
       {/* Sidebar */}
-      <div className="w-[20%] min-w-[200px] flex flex-col items-center justify-between fixed right-0 h-screen overflow-y-auto bg-white dark:bg-black py-16 px-4">
+      <div className="w-[20%] min-w-[200px] flex flex-col items-center justify-between fixed right-0 h-screen overflow-y-auto bg-gray-200 dark:bg-black py-16 px-4">
         {/* Image */}
         <div className="w-full flex justify-center pt-4">
           <Image
@@ -341,16 +344,16 @@ export default function Home() {
             width={200}
             height={200}
             priority
-            className="dark:invert rounded-full aspect-square"
+            className="dark:invert rounded-full aspect-square w-[65%] "
           />
         </div>
 
         {/* Anchor Links */}
         <nav className="flex flex-col items-center w-full">
-          <a href="#about" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
-          <a href="#work" className="text-xl md:text-2xl hover:underline mb-4">Work</a>
-          <a href="#projects" className="text-xl md:text-2xl hover:underline mb-4">Projects</a>
-          <a href="#Resume" className="text-xl md:text-2xl hover:underline mb-4">Resume</a>
+          <a href="#about" className="md:text-2xl hover:underline mb-4">Home</a>
+          <a href="#work" className="md:text-2xl hover:underline mb-4">Work</a>
+          <a href="#projects" className="md:text-2xl hover:underline mb-4">Projects</a>
+          <a href="#Resume" className="md:text-2xl hover:underline mb-4">Resume</a>
         </nav>
 
         {/* Socials */}
@@ -373,12 +376,12 @@ export default function Home() {
               <BackgroundLines> </BackgroundLines>
             </div>
             <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative">
-              Hello
+              Misha Burnayev
             </h1>
           </div>
           <p className="text-2xl">
-            I'm <strong>Misha Burnayev</strong>, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
-            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for efficiently bringing ideas to life with an eternally evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
+            <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
+            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
             I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
           </p>
           <h6 className="w-full border-t border-gray-300" id="work" />
