@@ -52,7 +52,7 @@ export const AnimatedTooltip = ({
         confetti({ 
           particleCount: 150,
           spread: 360,
-          startVelocity: 60,
+          startVelocity: 100,
           origin: { x: 0.55, y: 0.4 }
         });
       }
@@ -124,7 +124,7 @@ export const AnimatedTooltip = ({
 
           <div
             className="relative"
-            onClick={() => handleTooltipClick(item.href)} // Clicking this div will trigger the navigation
+            onClick={() => handleTooltipClick(item.href)}
           >
             <Image
               onMouseMove={handleMouseMove}
@@ -132,7 +132,7 @@ export const AnimatedTooltip = ({
               width={100}
               src={item.image}
               alt={item.name}
-              className="object-cover !m-0 !p-0 object-top rounded-full h-14 w-14 border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
+              className="object-cover !m-0 !p-0 object-top rounded-full h-[5vw] w-[5vw] min-h-[40px] min-w-[40px] max-h-[65px] max-w-[65px] border-2 group-hover:scale-105 group-hover:z-30 border-white relative transition duration-500"
             />
           </div>
         </div>

@@ -1,7 +1,8 @@
 "use client";
-import React from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { BackgroundLines } from "@/components/ui/background-lines";
+import { Modal, ModalTrigger } from "@/components/ui/animated-modal";
 import Image from "next/image";
 
 const tooltipLinks = [
@@ -47,6 +48,12 @@ const iDirectButtons = [
     bgcolor: "#FFA79A",
     txcolor: "#000000",
     icon: "/images/git_logo.png"
+  },
+  {
+    name: "JavaScript",
+    bgcolor: "#FFEF84",
+    txcolor: "#000000",
+    icon: "/images/javascript_logo.png"
   },
   {
     name: "Jenkins",
@@ -325,45 +332,53 @@ export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen flex-row-reverse">
       {/* Sidebar */}
-      <div className="w-[20%] min-w-[200px] flex flex-col items-center pt-8 fixed right-0 h-screen overflow-y-auto bg-white dark:bg-black">
-        <div className="mb-8">
+      <div className="w-[20%] min-w-[200px] flex flex-col items-center justify-between fixed right-0 h-screen overflow-y-auto bg-white dark:bg-black py-16 px-4">
+        {/* Image */}
+        <div className="w-full flex justify-center pt-4">
           <Image
             src="/images/pic.png"
             alt="I'm walkin' here!"
             width={200}
             height={200}
             priority
-            className="dark:invert"
+            className="dark:invert rounded-full aspect-square"
           />
         </div>
 
-        <div className="flex flex-col items-center mb-[50%] w-full">
-          <nav className="flex flex-col items-center">
-            <a href="#about" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
-            <a href="#work" className="text-xl md:text-2xl hover:underline mb-4">Work</a>
-            <a href="#projects" className="text-xl md:text-2xl hover:underline mb-4">Projects</a>
-            <a href="#Resume" className="text-xl md:text-2xl hover:underline mb-4">Resume</a>
-          </nav>
-        </div>
+        {/* Anchor Links */}
+        <nav className="flex flex-col items-center w-full">
+          <a href="#about" className="text-xl md:text-2xl hover:underline mb-4">Home</a>
+          <a href="#work" className="text-xl md:text-2xl hover:underline mb-4">Work</a>
+          <a href="#projects" className="text-xl md:text-2xl hover:underline mb-4">Projects</a>
+          <a href="#Resume" className="text-xl md:text-2xl hover:underline mb-4">Resume</a>
+        </nav>
 
-        <div>
+        {/* Socials */}
+        <div className="pb-4">
           <AnimatedTooltip items={tooltipLinks} />
         </div>
       </div>
 
       {/* Main */}
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded shadow-lg z-50">
-          <p className="font-bold">--- PSA ---</p>
-          <p>This page is currently under construction!</p>
-        </div>
-
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start ml-[10%] mr-[30%]">
+        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start ml-[5%] mr-[25%]">
           <h1 id="about"></h1>
-          <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)]">Hello</h1>
+          <div className="relative w-full flex items-center justify-start">
+            <div className="absolute w-[1440px] h-[900px] transform scale-[0.4] origin-center" 
+                 style={{ 
+                   left: '11%', 
+                   transform: 'translate(-50%, -50%) scale(0.4)',
+                   top: '50%'
+                 }}>
+              <BackgroundLines> </BackgroundLines>
+            </div>
+            <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative">
+              Hello
+            </h1>
+          </div>
           <p className="text-2xl">
             I'm <strong>Misha Burnayev</strong>, a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
-            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, I like programming the most since it's an excellent medium for efficiently bringing ideas to life and at the end of development, I feel like I've created an extension of myself.<br></br><br></br>
+            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for efficiently bringing ideas to life with an eternally evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
             I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
           </p>
           <h6 className="w-full border-t border-gray-300" id="work" />
@@ -371,17 +386,27 @@ export default function Home() {
           <h6 className="w-full border-t border-gray-300" id="projects" />
           <HoverEffect className="mx-auto" items={projectCards} />
           <h6 className="w-full border-t border-gray-300" id="Resume" />
-          <p className="text-2xl">
-            <a href="http://150.136.52.185/" target="_blank">Resume</a>
-          </p>
+          <div className="w-full flex justify-center mb-16">
+            <Modal>
+              <a href="http://150.136.52.185/" target="_blank">
+                <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
+                  <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                    <strong>Resume</strong>
+                  </span>
+                  <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
+                    🎉
+                  </div>
+                </ModalTrigger>
+              </a>
+            </Modal>
+          </div>
         </main>
-
         {/* Footer */}
         <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-          <p>Built with Next.js and Tailwind CSS, to be deployed on Firebase</p>
+          <p>Built with Next.js and Tailwind CSS, and deployed to Firebase!</p>
         </footer>
-
       </div>
+
     </div>
   );
 }
