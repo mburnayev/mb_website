@@ -24,14 +24,14 @@ const tooltipLinks = [
     id: 3,
     name: "Discord",
     designation: "Q&A opens after 5pm",
-    image: "https://cdn-icons-png.flaticon.com/256/5968/5968756.png",
+    image: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/discord-round-color-icon.png",
     href: "https://discordapp.com/users/228204911098200064"
   },
   {
     id: 4,
     name: "Email",
     designation: "Infiltrate my inbox",
-    image: "https://cdn-icons-png.flaticon.com/256/5968/5968534.png",
+    image: "https://static.vecteezy.com/system/resources/previews/016/716/465/non_2x/gmail-icon-free-png.png",
     href: "mailto:misha@burnayev.com"
   }
 ];

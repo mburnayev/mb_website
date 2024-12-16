@@ -39,24 +39,24 @@ export const AnimatedTooltip = ({
     if (sfxCounter == 8) {
       sfxCounter = 0;
     }
-    if (sfxCounter == 6) {
-      confetti({ 
-        particleCount: 100,
-        spread: 100,
-        startVelocity: 45,
-        origin: { x: 0.55, y: 0.6 }
-      });
-    }
-    else if (sfxCounter == 7) {
-      for(let i = 0; i < 3; i++){
-        confetti({ 
-          particleCount: 150,
-          spread: 360,
-          startVelocity: 100,
-          origin: { x: 0.55, y: 0.4 }
-        });
-      }
-    }
+    // if (sfxCounter == 6) {
+    //   confetti({ 
+    //     particleCount: 100,
+    //     spread: 100,
+    //     startVelocity: 45,
+    //     origin: { x: 0.55, y: 0.6 }
+    //   });
+    // }
+    // else if (sfxCounter == 7) {
+    //   for(let i = 0; i < 3; i++){
+    //     confetti({ 
+    //       particleCount: 150,
+    //       spread: 360,
+    //       startVelocity: 100,
+    //       origin: { x: 0.55, y: 0.4 }
+    //     });
+    //   }
+    // }
     // var audio = new Audio(musicDict[sfxCounter % 8]);
     // audio.play();
     sfxCounter += 1;
@@ -78,7 +78,7 @@ export const AnimatedTooltip = ({
   };
 
   const handleTooltipClick = (href: string) => {
-    window.open(href, "_blank"); // Open the URL in a new tab
+    window.open(href, "_blank");
   };
 
   return (
@@ -93,31 +93,28 @@ export const AnimatedTooltip = ({
           <AnimatePresence mode="popLayout">
             {hoveredIndex === item.id && (
               <motion.div
-                initial={{ opacity: 0, x: 100, y: 200, scale: 0.6 }}
+                initial={{ opacity: 0, scale: 0.6 }}
                 animate={{
                   opacity: 1,
-                  y: 65,
                   scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 10,
-                  },
                 }}
-                exit={{ opacity: 0, x: 100, y: 200, scale: 0.6 }}
+                exit={{ opacity: 0, scale: 0.6 }}
                 style={{
                   translateX: translateX,
                   rotate: rotate,
-                  whiteSpace: "nowrap",
+                  x: "calc(6vw + 5px)",
+                  y: "calc(3vw + 0px)",
                 }}
-                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2 break-words"
               >
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
-                <div className="font-bold text-white relative z-30 text-base">
+                <div className="font-bold text-white relative z-30 text-base text-center">
                   {item.name}
                 </div>
-                <div className="text-white text-xs">{item.designation}</div>
+                <div className="text-white text-xs text-center">
+                  {item.designation}
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

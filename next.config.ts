@@ -7,8 +7,17 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "cdn-icons-png.flaticon.com",
-        port: "",
         pathname: "/256/**/*.png"
+      },
+      {
+        protocol: "https",
+        hostname: "uxwing.com",
+        pathname: "/wp-content/**/*.png"
+      },
+      {
+        protocol: "https",
+        hostname: "static.vecteezy.com",
+        pathname: "/system/**/*.png"
       }
     ]
   },
