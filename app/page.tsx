@@ -355,7 +355,7 @@ export default function Home() {
           <a href="#resume" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Resume</a>
         </nav>
 
-        {/* Socials - row on mobile, normal on desktop */}
+        {/* Socials */}
         <div className="flex justify-end lg:justify-start pr-4 lg:pr-0">
           <div className="flex flex-row lg:flex-col">
             <AnimatedTooltip items={tooltipLinks} />
@@ -374,7 +374,7 @@ export default function Home() {
                    top: '50%',
                    transform: 'translate(0, -50%) scale(0.4)',
                  }}>
-              <BackgroundLines> </BackgroundLines>
+              {/* <BackgroundLines> </BackgroundLines> */}
             </div>
             <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative z-10 text-center">
               Misha Burnayev
