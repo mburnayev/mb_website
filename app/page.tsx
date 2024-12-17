@@ -3,7 +3,6 @@ import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { Modal, ModalTrigger } from "@/components/ui/animated-modal";
-import Image from "next/image";
 
 const tooltipLinks = [
   {
@@ -41,31 +40,31 @@ const iDirectButtons = [
     name: "C++",
     bgcolor: "#8BB6E4",
     txcolor: "#000000",
-    icon: "/images/cpp_logo.png"
+    icon: "images/cpp_logo.png"
   },
   {
     name: "Git",
     bgcolor: "#FFA79A",
     txcolor: "#000000",
-    icon: "/images/git_logo.png"
+    icon: "images/git_logo.png"
   },
   {
     name: "JavaScript",
     bgcolor: "#FFEF84",
     txcolor: "#000000",
-    icon: "/images/javascript_logo.png"
+    icon: "images/javascript_logo.png"
   },
   {
     name: "Jenkins",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/jenkins_logo.png"
+    icon: "images/jenkins_logo.png"
   },
   {
     name: "Docker",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/docker_logo.webp"
+    icon: "images/docker_logo.webp"
   }
 ]
 
@@ -74,25 +73,25 @@ const researchButtons = [
     name: "C++",
     bgcolor: "#8BB6E4",
     txcolor: "#000000",
-    icon: "/images/cpp_logo.png"
+    icon: "images/cpp_logo.png"
   },
   {
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/python_logo.svg"
+    icon: "images/python_logo.svg"
   },
   {
     name: "OpenMV",
     bgcolor: "#9cc4ed",
     txcolor: "#000000",
-    icon: "/images/openmv_logo.png"
+    icon: "images/openmv_logo.png"
   },
   {
     name: "OpenCV",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/opencv_logo.webp"
+    icon: "images/opencv_logo.webp"
   }
 ]
 
@@ -101,13 +100,13 @@ const DSButtons = [
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/python_logo.svg"
+    icon: "images/python_logo.svg"
   },
   {
     name: "R",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/r_logo.png"
+    icon: "images/r_logo.png"
   }
 ]
 
@@ -116,19 +115,19 @@ const CSButtons = [
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/python_logo.svg"
+    icon: "images/python_logo.svg"
   },
   {
     name: "Java",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/java_logo.png"
+    icon: "images/java_logo.png"
   },
   {
     name: "C",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/c_logo.png"
+    icon: "images/c_logo.png"
   }
 ]
 
@@ -137,49 +136,49 @@ const CF3KButtons = [
     name: "Dart",
     bgcolor: "#76F4E2",
     txcolor: "#000000",
-    icon: "/images/dart_logo.png"
+    icon: "images/dart_logo.png"
   },
   {
     name: "Flutter",
     bgcolor: "#B2E8FF",
     txcolor: "#000000",
-    icon: "/images/flutter_logo.webp"
+    icon: "images/flutter_logo.webp"
   },
   {
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/python_logo.svg"
+    icon: "images/python_logo.svg"
   },
   {
     name: "PyTorch",
     bgcolor: "#D5A9A0",
     txcolor: "#000000",
-    icon: "/images/pytorch_logo.webp"
+    icon: "images/pytorch_logo.webp"
   },
   {
     name: "OpenCV",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "/images/opencv_logo.webp"
+    icon: "images/opencv_logo.webp"
   },
   {
     name: "Git",
     bgcolor: "#FFA79A",
     txcolor: "#000000",
-    icon: "/images/git_logo.png"
+    icon: "images/git_logo.png"
   },
   {
     name: "Firebase",
     bgcolor: "#FFDC68",
     txcolor: "#000000",
-    icon: "/images/firebase_logo.png"
+    icon: "images/firebase_logo.png"
   },
   {
     name: "Tensorflow",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/tensorflow_logo.png"
+    icon: "images/tensorflow_logo.png"
   },
 ]
 
@@ -188,61 +187,61 @@ const websiteButtons = [
     name: "Next.JS",
     bgcolor: "#888888",
     txcolor: "#000000",
-    icon: "/images/nextjs_logo.webp"
+    icon: "images/nextjs_logo.webp"
   },
   {
     name: "TypeScript",
     bgcolor: "#73A5DD",
     txcolor: "#000000",
-    icon: "/images/typescript_logo.png"
+    icon: "images/typescript_logo.png"
   },
   {
     name: "HTML",
     bgcolor: "#D5A9A0",
     txcolor: "#000000",
-    icon: "/images/html_logo.webp"
+    icon: "images/html_logo.webp"
   },
   {
     name: "Tailwind CSS",
     bgcolor: "#A2E3FF",
     txcolor: "#000000",
-    icon: "/images/tailwind_logo.png"
+    icon: "images/tailwind_logo.png"
   },
   {
     name: "Git",
     bgcolor: "#FFA79A",
     txcolor: "#000000",
-    icon: "/images/git_logo.png"
+    icon: "images/git_logo.png"
   },
   {
     name: "Node.JS",
     bgcolor: "#CAE79D",
     txcolor: "#000000",
-    icon: "/images/nodejs_logo.webp"
+    icon: "images/nodejs_logo.webp"
   },
   {
     name: "Firebase",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/firebase_logo.png"
+    icon: "images/firebase_logo.png"
   },
   {
     name: "Nginx",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/nginx_logo.webp"
+    icon: "images/nginx_logo.webp"
   },
   {
     name: "OCI",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/oci_logo.png"
+    icon: "images/oci_logo.png"
   },
   {
     name: "GCP",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/gcp_logo.png"
+    icon: "images/gcp_logo.png"
   }
 ]
 
@@ -251,25 +250,25 @@ const IFGDBButtons = [
     name: "JavaScript",
     bgcolor: "#FFEF84",
     txcolor: "#000000",
-    icon: "/images/javascript_logo.png"
+    icon: "images/javascript_logo.png"
   },
   {
     name: "Discord API",
     bgcolor: "#9DA5FF",
     txcolor: "#000000",
-    icon: "/images/discord_logo.png"
+    icon: "images/discord_logo.png"
   },
   {
     name: "Git",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/git_logo.png"
+    icon: "images/git_logo.png"
   },
   {
     name: "Node.JS",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "/images/nodejs_logo.webp"
+    icon: "images/nodejs_logo.webp"
   }
 ]
 
@@ -330,64 +329,65 @@ const projectCards = [
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-screen flex-row-reverse">
+    <div className="flex flex-col lg:flex-row-reverse min-h-screen">
       {/* Vertical Divider */}
-      <div className="fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
+      <div className="hidden lg:block fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
 
       {/* Sidebar */}
-      <div className="w-[20%] min-w-[200px] flex flex-col items-center justify-between fixed right-0 h-screen overflow-y-auto bg-gray-200 dark:bg-black py-16 px-4">
+      <div className="lg:w-[20%] lg:min-w-[200px] flex lg:flex-col items-center justify-between lg:fixed lg:right-0 lg:h-screen 
+                      w-full sticky top-0 z-50 bg-gray-200 dark:bg-black py-4 lg:py-16 px-4">
         {/* Image */}
-        <div className="w-full flex justify-center pt-4">
-          <Image
+        <div className="lg:w-full flex justify-center lg:pt-4">
+          <img
             src="/images/pic.png"
             alt="I'm walkin' here!"
-            width={200}
-            height={200}
-            priority
-            className="dark:invert rounded-full aspect-square w-[65%] "
+            width="200"
+            height="200"
+            className="dark:invert rounded-full aspect-square w-12 lg:w-[65%]"
           />
         </div>
 
-        {/* Anchor Links */}
-        <nav className="flex flex-col items-center w-full">
-          <a href="#about" className="md:text-2xl hover:underline mb-4">Home</a>
-          <a href="#work" className="md:text-2xl hover:underline mb-4">Work</a>
-          <a href="#projects" className="md:text-2xl hover:underline mb-4">Projects</a>
-          <a href="#Resume" className="md:text-2xl hover:underline mb-4">Resume</a>
+        {/* Navigation */}
+        <nav className="flex flex-row lg:flex-col items-center gap-4 lg:gap-0">
+          <a href="#about" className="text-sm lg:text-2xl hover:underline lg:mb-4">Home</a>
+          <a href="#work" className="text-sm lg:text-2xl hover:underline lg:mb-4">Work</a>
+          <a href="#projects" className="text-sm lg:text-2xl hover:underline lg:mb-4">Projects</a>
+          <a href="#Resume" className="text-sm lg:text-2xl hover:underline lg:mb-4">Resume</a>
         </nav>
 
         {/* Socials */}
-        <div className="pb-4">
+        <div className="lg:pb-4">
           <AnimatedTooltip items={tooltipLinks} />
         </div>
       </div>
 
-      {/* Main */}
-      <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-        <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start ml-[5%] mr-[25%]">
+      {/* Main content */}
+      <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20">
+        <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
           <h1 id="about"></h1>
           <div className="relative w-full flex items-center justify-start">
-            <div className="absolute w-[1440px] h-[900px] transform scale-[0.4] origin-center" 
+            <div className="absolute w-[1440px] h-[900px] transform scale-[0.2] lg:scale-[0.4] origin-center" 
                  style={{ 
-                   left: '11%', 
-                   transform: 'translate(-50%, -50%) scale(0.4)',
+                   left: '50%', 
+                   transform: 'translate(-50%, -50%) scale(0.2)',
                    top: '50%'
                  }}>
               <BackgroundLines> </BackgroundLines>
             </div>
-            <h1 className="text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative">
+            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative">
               Misha Burnayev
             </h1>
           </div>
-          <p className="text-2xl">
+          
+          <p className="text-lg lg:text-2xl">
             <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
             I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
             I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
           </p>
           <h6 className="w-full border-t border-gray-300" id="work" />
-          <HoverEffect className="mx-auto" items={workCards} />
+          <HoverEffect className="mx-auto w-full" items={workCards} />
           <h6 className="w-full border-t border-gray-300" id="projects" />
-          <HoverEffect className="mx-auto" items={projectCards} />
+          <HoverEffect className="mx-auto w-full" items={projectCards} />
           <h6 className="w-full border-t border-gray-300" id="Resume" />
           <div className="w-full flex justify-center mb-16">
             <Modal>
@@ -404,12 +404,12 @@ export default function Home() {
             </Modal>
           </div>
         </main>
+
         {/* Footer */}
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm lg:text-base p-4">
           <p>Built with Next.js and Tailwind CSS, and deployed to Firebase!</p>
         </footer>
       </div>
-
     </div>
   );
 }

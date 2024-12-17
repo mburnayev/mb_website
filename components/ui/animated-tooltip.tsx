@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
 import confetti from "canvas-confetti";
 
@@ -123,10 +122,10 @@ export const AnimatedTooltip = ({
             className="relative"
             onClick={() => handleTooltipClick(item.href)}
           >
-            <Image
+            <img
               onMouseMove={handleMouseMove}
-              height={100}
-              width={100}
+              height="100"
+              width="100"
               src={item.image}
               alt={item.name}
               className="!m-0 !p-0 rounded-full h-[3.5vw] w-[3.5vw] group-hover:z-30 relative transition duration-500 object-contain"

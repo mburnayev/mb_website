@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
+    unoptimized: true,
+    disableStaticImages: false,
     remotePatterns: [
       {
         protocol: "https",
@@ -28,7 +30,7 @@ const nextConfig: NextConfig = {
     // the aforementioned errors
     ignoreDuringBuilds: true
   },
-  // output: "export"
+  output: "export",
 };
 
 export default nextConfig;

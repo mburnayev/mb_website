@@ -1,5 +1,4 @@
-import Image from "next/image";
-
+"use client";
 const needBorder = (color: string) => {
     if (color.startsWith('#')) {
         return color.toUpperCase() === '#FFFFFF';
@@ -33,7 +32,7 @@ export const LogoButton = ({
                         color: item.txcolor
                     }}
                 >
-                    <Image src={item.icon} alt="" width={20} height={20} />
+                    <img src={item.icon} alt="" width="20" height="20" />
                     <span> {item.name} </span>
                 </button>
             ))}
