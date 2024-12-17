@@ -335,11 +335,11 @@ export default function Home() {
 
       {/* Sidebar */}
       <div className="lg:w-[20%] lg:min-w-[200px] flex lg:flex-col items-center justify-between lg:fixed lg:right-0 lg:h-screen 
-                      w-full sticky top-0 z-50 bg-gray-200 dark:bg-black py-4 lg:py-16 px-4">
+                      w-full sticky top-0 z-50 bg-gray-200 py-4 lg:py-16 px-4">
         {/* Image */}
         <div className="lg:w-full flex justify-center lg:pt-4">
           <img
-            src="/images/pic.png"
+            src="/images/big_image.jpg"
             alt="I'm walkin' here!"
             width="200"
             height="200"
@@ -347,17 +347,19 @@ export default function Home() {
           />
         </div>
 
-        {/* Navigation */}
-        <nav className="flex flex-row lg:flex-col items-center gap-4 lg:gap-0">
-          <a href="#about" className="text-sm lg:text-2xl hover:underline lg:mb-4">Home</a>
-          <a href="#work" className="text-sm lg:text-2xl hover:underline lg:mb-4">Work</a>
-          <a href="#projects" className="text-sm lg:text-2xl hover:underline lg:mb-4">Projects</a>
-          <a href="#Resume" className="text-sm lg:text-2xl hover:underline lg:mb-4">Resume</a>
+        {/* Anchor Links */}
+        <nav className="hidden lg:flex lg:flex-col items-center w-full">
+          <a href="#about" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Home</a>
+          <a href="#work" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Work</a>
+          <a href="#projects" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Projects</a>
+          <a href="#resume" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Resume</a>
         </nav>
 
-        {/* Socials */}
-        <div className="lg:pb-4">
-          <AnimatedTooltip items={tooltipLinks} />
+        {/* Socials - row on mobile, normal on desktop */}
+        <div className="flex justify-end lg:justify-start pr-4 lg:pr-0">
+          <div className="flex flex-row lg:flex-col">
+            <AnimatedTooltip items={tooltipLinks} />
+          </div>
         </div>
       </div>
 
@@ -365,16 +367,16 @@ export default function Home() {
       <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20">
         <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
           <h1 id="about"></h1>
-          <div className="relative w-full flex items-center justify-start">
-            <div className="absolute w-[1440px] h-[900px] transform scale-[0.2] lg:scale-[0.4] origin-center" 
+          <div className="relative w-full flex items-center lg:justify-start justify-center">
+            <div className="absolute w-[1440px] h-[900px] transform origin-left" 
                  style={{ 
-                   left: '50%', 
-                   transform: 'translate(-50%, -50%) scale(0.2)',
-                   top: '50%'
+                   left: '-10%',
+                   top: '50%',
+                   transform: 'translate(0, -50%) scale(0.4)',
                  }}>
               <BackgroundLines> </BackgroundLines>
             </div>
-            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative">
+            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative z-10 text-center">
               Misha Burnayev
             </h1>
           </div>
@@ -388,7 +390,7 @@ export default function Home() {
           <HoverEffect className="mx-auto w-full" items={workCards} />
           <h6 className="w-full border-t border-gray-300" id="projects" />
           <HoverEffect className="mx-auto w-full" items={projectCards} />
-          <h6 className="w-full border-t border-gray-300" id="Resume" />
+          <h6 className="w-full border-t border-gray-300" id="resume" />
           <div className="w-full flex justify-center mb-16">
             <Modal>
               <a href="http://150.136.52.185/" target="_blank">

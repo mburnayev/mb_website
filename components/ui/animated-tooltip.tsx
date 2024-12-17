@@ -84,7 +84,7 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item) => (
         <div
-          className="-mr-4 mb-1 relative group"
+          className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2"
           key={item.name}
           onMouseEnter={() => {setHoveredIndex(item.id), playSFX()}}
           onMouseLeave={() => setHoveredIndex(null)}
@@ -104,7 +104,7 @@ export const AnimatedTooltip = ({
                   x: "calc(6vw + 5px)",
                   y: "calc(3vw + 0px)",
                 }}
-                className="absolute -top-16 -left-1/2 translate-x-1/2 flex text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2 break-words"
+                className="absolute hidden lg:flex -top-16 -left-1/2 translate-x-1/2 text-xs flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2 break-words"
               >
                 <div className="absolute inset-x-10 z-30 w-[20%] -bottom-px bg-gradient-to-r from-transparent via-emerald-500 to-transparent h-px " />
                 <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " />
@@ -128,7 +128,7 @@ export const AnimatedTooltip = ({
               width="100"
               src={item.image}
               alt={item.name}
-              className="!m-0 !p-0 rounded-full h-[3.5vw] w-[3.5vw] group-hover:z-30 relative transition duration-500 object-contain"
+              className="!m-0 !p-0 rounded-full h-8 w-8 lg:h-[3.5vw] lg:w-[3.5vw] group-hover:z-30 relative transition duration-500 object-contain"
             />
           </div>
         </div>

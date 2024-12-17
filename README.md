@@ -34,9 +34,9 @@ Copy over existing resume logic as base for funky version | - | -
 Rework funky website accordingly | - | -
 Do some testing on different browsers | - | -
 Deploy website | - | ✅
-Fix website deployment | It's publicly available, but I get an incompatible Node version error? | -
+Fix website deployment | It's publicly available, but I get an incompatible Node version error? | ✅
 Add vanity URL | - | -
-Work on mobile broswer support | - | -
+Add mobile broswer support | in progress | -
 
 ## Miscellaneous
 A development server for this project can be run using `npm run dev` and accessed on localhost:3000

@@ -74,16 +74,17 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-2 sm:p-4 overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="p-2 sm:p-4">{children}</div>
       </div>
     </div>
   );
 };
+
 export const CardTitle = ({
   className,
   children,
@@ -92,7 +93,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-black-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-black-100 font-bold tracking-wide mt-2 sm:mt-4 text-sm sm:text-base", className)}>
       {children}
     </h4>
   );
@@ -106,7 +107,7 @@ export const CardSubtext = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h6 className={cn("text-black-100 tracking-wide mt-4", className)}>
+    <h6 className={cn("text-black-100 tracking-wide mt-2 sm:mt-4 text-xs sm:text-sm", className)}>
       {children}
     </h6>
   );
@@ -122,7 +123,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-black-400 tracking-wide leading-relaxed text-sm whitespace-pre-line",
+        "mt-4 sm:mt-8 text-black-400 tracking-wide leading-relaxed text-xs sm:text-sm whitespace-pre-line",
         className
       )}
     >
