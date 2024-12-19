@@ -25,18 +25,19 @@ Create new Firebase project for hosting | - | ✅
 Link codebase to Firebase project | "HTTP Error: 400, Key creation is not allowed on this service account." | ❎
 Amend service account key creation policy for my project in GCP | - | ✅
 Link codebase to Firebase project | GitHub workflows added as well | ✅
-Add resume to Firebase | ~~Maybe use Cloud Storage~~ Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance | ✅
-Add link to redirect to my resume on website | - | ✅
+~~Add resume to Firebase~~ | ~~Maybe use Cloud Storage Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance~~ | ~~✅~~
+Add link to redirect to my resume ~~on website~~ | Resume included as an app asset, no need for external redirection | ✅
 Fill in descriptions for experience | - | ✅
 Make UX generally more appealing, fix UI | - | ✅
+Test plain website on different browsers (desktop and mobile) | - | ✅
 Create switch to turn on the funk | in progress | -
-Copy over existing resume logic as base for funky version | - | -
+Copy over existing webpage logic as base for funky version | - | -
 Rework funky website accordingly | - | -
-Do some testing on different browsers | - | -
+Test funky website on different browsers (desktop and mobile) | - | -
 Deploy website | - | ✅
 Fix website deployment | It's publicly available, but I get an incompatible Node version error? | ✅
-Add vanity URL | - | -
-Add mobile broswer support | in progress | -
+Add vanity URL | in progress | -
+Add mobile broswer support | - | ✅
 
 ## Miscellaneous
 A development server for this project can be run using `npm run dev` and accessed on localhost:3000
