@@ -371,7 +371,7 @@ export default function Home() {
               Misha Burnayev
             </h1>
           </div>
-          
+
           <p className="text-lg lg:text-2xl">
             <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
             I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
@@ -384,13 +384,13 @@ export default function Home() {
           <h6 className="w-full border-t border-gray-300" id="resume" />
           <div className="w-full flex justify-center mb-16">
             <Modal>
-              <a href="http://150.136.52.185/" target="_blank">
+              <a href="resume.pdf" target="_blank">
                 <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
                   <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
                     <strong>Resume</strong>
                   </span>
                   <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
-                    🎉
+                    🧰
                   </div>
                 </ModalTrigger>
               </a>
