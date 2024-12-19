@@ -1,5 +1,6 @@
 "use client";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
+import confetti from "canvas-confetti";
 
 import {
   motion,
@@ -8,6 +9,8 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+
+var sfxCounter = 0;
 
 export const AnimatedTooltip = ({
   items,
@@ -22,6 +25,42 @@ export const AnimatedTooltip = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
+  const musicDict: { [key: number]: string } = {
+    0: "/sfx/sfx_1.mp3",
+    1: "/sfx/sfx_2.mp3",
+    2: "/sfx/sfx_3.mp3",
+    3: "/sfx/sfx_4.mp3",
+    4: "/sfx/sfx_5.mp3",
+    5: "/sfx/sfx_6.mp3",
+    6: "/sfx/sfx_medium.mp3",
+    7: "/sfx/sfx_big.mp3",
+  }
+  const playSFX = () => {
+    if (sfxCounter == 8) {
+      sfxCounter = 0;
+    }
+    if (sfxCounter == 6) {
+      confetti({
+        particleCount: 100,
+        spread: 100,
+        startVelocity: 45,
+        origin: { x: 0.55, y: 0.6 }
+      });
+    }
+    else if (sfxCounter == 7) {
+      for (let i = 0; i < 3; i++) {
+        confetti({
+          particleCount: 150,
+          spread: 360,
+          startVelocity: 100,
+          origin: { x: 0.55, y: 0.4 }
+        });
+      }
+    }
+    var audio = new Audio(musicDict[sfxCounter % 8]);
+    audio.play();
+    sfxCounter += 1;
+  }
 
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
@@ -49,7 +88,7 @@ export const AnimatedTooltip = ({
         <div
           className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2"
           key={item.name}
-          onMouseEnter={() => {setHoveredIndex(item.id)}}
+          onMouseEnter={() => { setHoveredIndex(item.id), playSFX() }}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence mode="popLayout">
