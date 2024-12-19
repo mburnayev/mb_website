@@ -329,7 +329,7 @@ const projectCards = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col lg:flex-row-reverse min-h-screen">
+    <div className="flex flex-col lg:flex-row-reverse min-h-screen overflow-x-hidden">
       {/* Vertical Divider */}
       <div className="hidden lg:block fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
 
@@ -364,7 +364,7 @@ export default function Home() {
       </div>
 
       {/* Main content */}
-      <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20">
+      <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20 overflow-x-hidden">
         <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
           <h1 id="about"></h1>
           <div className="relative w-full flex items-center lg:justify-start justify-center">
@@ -374,7 +374,7 @@ export default function Home() {
                    top: '50%',
                    transform: 'translate(0, -50%) scale(0.4)',
                  }}>
-              {/* <BackgroundLines> </BackgroundLines> */}
+              <BackgroundLines> </BackgroundLines>
             </div>
             <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative z-10 text-center">
               Misha Burnayev
