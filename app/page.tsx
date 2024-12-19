@@ -1,7 +1,6 @@
 "use client";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { BackgroundLines } from "@/components/ui/background-lines";
 import { Modal, ModalTrigger } from "@/components/ui/animated-modal";
 
 const tooltipLinks = [
@@ -368,15 +367,7 @@ export default function Home() {
         <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
           <h1 id="about"></h1>
           <div className="relative w-full flex items-center lg:justify-start justify-center">
-            <div className="absolute w-[1440px] h-[900px] transform origin-left" 
-                 style={{ 
-                   left: '-10%',
-                   top: '50%',
-                   transform: 'translate(0, -50%) scale(0.4)',
-                 }}>
-              <BackgroundLines> </BackgroundLines>
-            </div>
-            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative z-10 text-center">
+            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative text-center">
               Misha Burnayev
             </h1>
           </div>
