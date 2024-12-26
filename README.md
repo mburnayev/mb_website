@@ -1,4 +1,4 @@
-# mburnayev-website
+# [mburnayev-website](misha.burnayev.com)
 This webpage was created to record my progression as a software developer and portfolio feats I have accomplished, including this project itself.
 
 ## Project Overview
@@ -6,8 +6,8 @@ This is a [Next.js](https://nextjs.org) project using [Tailwind CSS](https://tai
 
 ## Technologies Used
 - Typescript/Javascipt
-- HTML + CSS
-- Next.JS
+- HTML + CSS3
+- Next.JS + Tailwind CSS
 - Firebase Hosting
 - Google Admin
 - Google Cloud Platform
@@ -33,10 +33,10 @@ Test plain website on different browsers (desktop and mobile) | - | ✅
 Create switch to turn on the funk | Swapped switch for subtle tooltip on image hover | ✅
 ~~Copy over existing webpage logic as base for funky version~~ | I thought I'd maybe use page routing for the plain and funky pages, but it was easier to use state management instead| ✅
 Rework funky website accordingly | SFX (re)added, BackgroundLines component (re)added (figured out how to use that), flavored text added, funk indicator added | ✅
-Test funky website on different browsers (desktop and mobile) | in progress | -
+Test funky website on different browsers (desktop and mobile) | - |  ✅
 Deploy website | - | ✅
-Fix website deployment | It's publicly available, but I get an incompatible Node version error? | ✅
-Add vanity URL | Should go up before New Year's Eve | ✅
+Fix website deployment | ~~It's publicly available, but I get an incompatible Node version error?~~ Website deployment fixed! | ✅
+Add vanity URL | original URL is [mburnayev-website.web.app](mburnayev-website.web.app), but [this one](misha.burnayev.com) will be the one I present and the one people will (usually) see  | ✅
 Add mobile broswer support | - | ✅
 
 ## Miscellaneous
