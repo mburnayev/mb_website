@@ -277,7 +277,7 @@ const IFGDBButtons = [
 const workCards = [
   {
     title: "Software Engineering Intern @ ST Engineering iDirect",
-    subtext: "May 2024 - August 2024",
+    subtext: "May - August 2024",
     description: "Co-developed and tested a C++ port of an important debugging script that retrieved many proprietary FPGA module statistics and integrated it into a larger command library.\n\nAfter the port, I revised a major product line's client-facing UI to permit DVB-S2X configurability and tied it to the provisioning service — the update was thouroughly tested and integrated into the product line.",
     link: "https://www.idirect.net/",
     skillIcons: iDirectButtons
@@ -292,14 +292,14 @@ const workCards = [
   {
     title: "DS Undergraduate Teaching Assistant @ George Mason University",
     subtext: "August 2022 - July 2024",
-    description: "Handled in-person and remote instruction and assistance, and grading for CDS-102 and CDS-230.",
+    description: "Handled in-person and remote instruction and assistance, and grading for CDS 102 and CDS 230.",
     link: "https://science.gmu.edu/academics/departments-units/computational-data-sciences",
     skillIcons: DSButtons
   },
   {
     title: "CS Undergraduate Teaching Assistant @ George Mason University",
     subtext: "August 2021 - December 2023",
-    description: "Handled in-person and remote instruction and assistance, and grading for CS-112, CS-211, CS-262, and CS-306.",
+    description: "Handled in-person and remote instruction and assistance, and grading for CS 112, CS 211, CS 262, and CS 306.",
     link: "https://cs.gmu.edu/",
     skillIcons: CSButtons
   },
@@ -307,15 +307,15 @@ const workCards = [
 
 const projectCards = [
   {
-    title: "mburnayev-website",
-    subtext: "November 2024 - December 2024",
-    description: "*This* website — as you can probably tell, this primarily serves as a portfolio of my career experiences.\n\nDesigned with Next to use some of the pre-built components that looked cool, but I expanded the project scope to get the functionality I wanted as this project was made under a Google organization and Firebase changed their free tier policies.",
+    title: "misha.burnayev.com",
+    subtext: "November - December 2024",
+    description: "*This* website — as you can probably tell, this primarily serves as a portfolio of experiences pertaining to my career.\n\nDesigned with Next to use some of the pre-built components that looked cool, but I expanded the project scope to get the functionality I wanted as this project was made under a Google organization and Firebase changed their free tier policies.",
     link: "https://github.com/mburnayev/mb_website",
     skillIcons: websiteButtons
   },
   {
-    title: "CatFinderinator3000",
-    subtext: "August - October 2024, November - December 2024 ",
+    title: "CatFinderinator3000 (CF3K)",
+    subtext: "August - December 2024",
     description: "A multidiscipline project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
     link: "https://github.com/mburnayev/CatFinderinator3000",
     skillIcons: CF3KButtons
@@ -394,7 +394,7 @@ export default function Home() {
             <p className="text-lg lg:text-2xl">
               <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
               I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
-              I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
+              I currently hold a bachelor's degree in Computer Science with a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
             </p>
             {/* Work */}
             <h6 className="w-full border-t border-gray-300" id="work" />

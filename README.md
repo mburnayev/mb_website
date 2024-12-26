@@ -36,7 +36,7 @@ Rework funky website accordingly | SFX (re)added, BackgroundLines component (re)
 Test funky website on different browsers (desktop and mobile) | - |  ✅
 Deploy website | - | ✅
 Fix website deployment | ~~It's publicly available, but I get an incompatible Node version error?~~ Website deployment fixed! | ✅
-Add vanity URL | original URL is [mburnayev-website.web.app](https://mburnayev-website.web.app), but [this one](https://misha.burnayev.com) will be the one I present and the one people will (usually) see  | ✅
+Add vanity URL | Original URL is [mburnayev-website.web.app](https://mburnayev-website.web.app), but [this one](https://misha.burnayev.com) will be the one I present and the one people will (usually) see  | ✅
 Add mobile broswer support | - | ✅
 
 ## Miscellaneous
