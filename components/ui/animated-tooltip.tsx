@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import confetti from "canvas-confetti";
 
 import {
   motion,
@@ -8,6 +9,9 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { FunkContext } from "@/contexts/FunkContext";
+
+var sfxCounter = 0;
 
 export const AnimatedTooltip = ({
   items,
@@ -20,8 +24,58 @@ export const AnimatedTooltip = ({
     href: string;
   }[];
 }) => {
+  const { isFunkEnabled: isAudioEnabled } = useContext(FunkContext);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [audioInitialized, setAudioInitialized] = useState(false);
   const springConfig = { stiffness: 100, damping: 5 };
+  const musicDict: { [key: number]: string } = {
+    0: "/sfx/sfx_1.mp3",
+    1: "/sfx/sfx_2.mp3",
+    2: "/sfx/sfx_3.mp3",
+    3: "/sfx/sfx_4.mp3",
+    4: "/sfx/sfx_5.mp3",
+    5: "/sfx/sfx_6.mp3",
+    6: "/sfx/sfx_medium.mp3",
+    7: "/sfx/sfx_big.mp3",
+  }
+
+  React.useEffect(() => {
+    const enableAudio = () => {
+      setAudioInitialized(true);
+      document.removeEventListener('click', enableAudio);
+    };
+    document.addEventListener('click', enableAudio);
+    return () => document.removeEventListener('click', enableAudio);
+  }, []);
+
+  const playSFX = () => {
+    if (!audioInitialized || !isAudioEnabled) return;
+    
+    if (sfxCounter == 8) {
+      sfxCounter = 0;
+    }
+    if (sfxCounter == 6) {
+      confetti({
+        particleCount: 100,
+        spread: 100,
+        startVelocity: 45,
+        origin: { x: 0.55, y: 0.6 }
+      });
+    }
+    else if (sfxCounter == 7) {
+      for (let i = 0; i < 3; i++) {
+        confetti({
+          particleCount: 150,
+          spread: 360,
+          startVelocity: 100,
+          origin: { x: 0.55, y: 0.4 }
+        });
+      }
+    }
+    var audio = new Audio(musicDict[sfxCounter % 8]);
+    audio.play();
+    sfxCounter += 1;
+  }
 
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
@@ -47,9 +101,9 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item) => (
         <div
-          className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2"
+          className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2 allow:autoplay"
           key={item.name}
-          onMouseEnter={() => {setHoveredIndex(item.id)}}
+          onMouseEnter={() => { setHoveredIndex(item.id), playSFX() }}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence mode="popLayout">

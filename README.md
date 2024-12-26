@@ -25,18 +25,18 @@ Create new Firebase project for hosting | - | ✅
 Link codebase to Firebase project | "HTTP Error: 400, Key creation is not allowed on this service account." | ❎
 Amend service account key creation policy for my project in GCP | - | ✅
 Link codebase to Firebase project | GitHub workflows added as well | ✅
-~~Add resume to Firebase~~ | ~~Maybe use Cloud Storage Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance~~ | ~~✅~~
+~~Add resume to Firebase~~ | ~~Maybe use Cloud Storage Cloud Storage has been moved to Firebase's Blaze (paid) plan, so I set up a free web server on an Oracle Cloud Compute instance~~ | -
 Add link to redirect to my resume ~~on website~~ | Resume included as an app asset, no need for external redirection | ✅
 Fill in descriptions for experience | - | ✅
 Make UX generally more appealing, fix UI | - | ✅
 Test plain website on different browsers (desktop and mobile) | - | ✅
-Create switch to turn on the funk | in progress | -
-Copy over existing webpage logic as base for funky version | - | -
-Rework funky website accordingly | - | -
-Test funky website on different browsers (desktop and mobile) | - | -
+Create switch to turn on the funk | Swapped switch for subtle tooltip on image hover | ✅
+~~Copy over existing webpage logic as base for funky version~~ | I thought I'd maybe use page routing for the plain and funky pages, but it was easier to use state management instead| ✅
+Rework funky website accordingly | SFX (re)added, BackgroundLines component (re)added (figured out how to use that), flavored text added, funk indicator added | ✅
+Test funky website on different browsers (desktop and mobile) | in progress | -
 Deploy website | - | ✅
 Fix website deployment | It's publicly available, but I get an incompatible Node version error? | ✅
-Add vanity URL | in progress | -
+Add vanity URL | Should go up before New Year's Eve | ✅
 Add mobile broswer support | - | ✅
 
 ## Miscellaneous

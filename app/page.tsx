@@ -1,7 +1,10 @@
 "use client";
+import { useState } from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
+import { BackgroundLines } from "@/components/ui/background-lines";
 import { Modal, ModalTrigger } from "@/components/ui/animated-modal";
+import { FunkContext } from "@/contexts/FunkContext";
 
 const tooltipLinks = [
   {
@@ -327,82 +330,103 @@ const projectCards = [
 ]
 
 export default function Home() {
+  const [isAudioEnabled, setIsAudioEnabled] = useState(false);
+
+  const handleClick = () => {
+    setIsAudioEnabled(!isAudioEnabled);
+  };
+
   return (
-    <div className="flex flex-col lg:flex-row-reverse min-h-screen overflow-x-hidden">
-      {/* Vertical Divider */}
-      <div className="hidden lg:block fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
+    <FunkContext.Provider value={{ isFunkEnabled: isAudioEnabled, setIsFunkEnabled: setIsAudioEnabled }}>
+      <div className="flex flex-col lg:flex-row-reverse min-h-screen overflow-x-hidden">
+        {/* Vertical Divider */}
+        <div className="hidden lg:block fixed right-[20%] w-[1px] h-screen bg-gray-400 dark:bg-gray-700" />
 
-      {/* Sidebar */}
-      <div className="lg:w-[20%] lg:min-w-[200px] flex lg:flex-col items-center justify-between lg:fixed lg:right-0 lg:h-screen 
-                      w-full sticky top-0 z-50 bg-gray-200 py-4 lg:py-16 px-4">
-        {/* Image */}
-        <div className="lg:w-full flex justify-center lg:pt-4">
-          <img
-            src="/images/big_image.jpg"
-            alt="I'm walkin' here!"
-            width="200"
-            height="200"
-            className="dark:invert rounded-full aspect-square w-12 lg:w-[65%]"
-          />
-        </div>
+        {/* Sidebar */}
+        <div className="lg:w-[20%] lg:min-w-[200px] flex lg:flex-col items-center justify-between lg:fixed lg:right-0 lg:h-screen 
+                        w-full sticky top-0 z-50 bg-gray-200 py-4 lg:py-16 px-4">
+          {/* Image */}
+          <div className="lg:w-full flex justify-center lg:pt-4 relative group">
+            <img
+              src="/images/big_image.jpg"
+              alt="image of me"
+              width="200"
+              height="200"
+              onClick={handleClick}
+              className={`rounded-full aspect-square w-12 lg:w-[65%] ${isAudioEnabled ? "ring-4 ring-blue-400" : ""}`}
+            />
+            {/* Image Tooltip */}
+            <div className="absolute lg:left-1/2 left-14 transform lg:-translate-x-1/2 translate-y-2 opacity-0 group-hover:opacity-100 bg-yellow-300 text-black text-xs py-2 px-2 text-nowrap rounded-md">
+              {isAudioEnabled ? "Turn off the funk!!!" : "Turn on the funk?"}
+            </div>
+          </div>
 
-        {/* Anchor Links */}
-        <nav className="hidden lg:flex lg:flex-col items-center w-full">
-          <a href="#about" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Home</a>
-          <a href="#work" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Work</a>
-          <a href="#projects" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Projects</a>
-          <a href="#resume" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Resume</a>
-        </nav>
+          {/* Anchor Links */}
+          <nav className="hidden lg:flex lg:flex-col items-center w-full">
+            <a href="#about" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Home</a>
+            <a href="#work" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Work</a>
+            <a href="#projects" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Projects</a>
+            <a href="#resume" className="text-lg xl:text-2xl 2xl:text-3xl hover:underline mb-4">Resume</a>
+          </nav>
 
-        {/* Socials */}
-        <div className="flex justify-end lg:justify-start pr-4 lg:pr-0">
-          <div className="flex flex-row lg:flex-col">
-            <AnimatedTooltip items={tooltipLinks} />
+          {/* Socials */}
+          <div className="flex justify-end lg:justify-start pr-4 lg:pr-0">
+            <div className="flex flex-row lg:flex-col">
+              <AnimatedTooltip items={tooltipLinks} />
+            </div>
           </div>
         </div>
+
+        {/* Main Content */}
+        <BackgroundLines> 
+        <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20 overflow-x-hidden">
+          <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
+            <h1 id="about"></h1>
+            {/* Big Name */}
+            <div className="relative w-full flex items-center lg:justify-start justify-center">
+              <h1 className={`text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative text-center
+                ${isAudioEnabled ? "animate-rainbow-text" : ""}`}>
+                Misha Burnayev
+              </h1>
+            </div>
+
+            {/* Elevator Pitch */}
+            <p className="text-lg lg:text-2xl">
+              <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
+              I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
+              I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
+            </p>
+            {/* Work */}
+            <h6 className="w-full border-t border-gray-300" id="work" />
+            <HoverEffect className="mx-auto w-full" items={workCards} />
+            {/* Projects */}
+            <h6 className="w-full border-t border-gray-300" id="projects" />
+            <HoverEffect className="mx-auto w-full" items={projectCards} />
+            {/* Moneymaker */}
+            <h6 className="w-full border-t border-gray-300" id="resume" />
+            <div className="w-full flex justify-center mb-16">
+              <Modal>
+                <a href="resume.pdf" target="_blank">
+                  <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
+                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                      <strong>Resume</strong>
+                    </span>
+                    <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
+                      🧰
+                    </div>
+                  </ModalTrigger>
+                </a>
+              </Modal>
+            </div>
+          </main>
+
+          {/* Footer */}
+          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm lg:text-base p-4">
+            <p>Built with Next.js and Tailwind CSS, and deployed to Firebase!</p>
+          </footer>
+        </div>
+        </BackgroundLines>
       </div>
-
-      {/* Main content */}
-      <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20 overflow-x-hidden">
-        <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
-          <h1 id="about"></h1>
-          <div className="relative w-full flex items-center lg:justify-start justify-center">
-            <h1 className="text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative text-center">
-              Misha Burnayev
-            </h1>
-          </div>
-
-          <p className="text-lg lg:text-2xl">
-            <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
-            I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
-            I currently hold a bachelor's degree in Computer Science, a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
-          </p>
-          <h6 className="w-full border-t border-gray-300" id="work" />
-          <HoverEffect className="mx-auto w-full" items={workCards} />
-          <h6 className="w-full border-t border-gray-300" id="projects" />
-          <HoverEffect className="mx-auto w-full" items={projectCards} />
-          <h6 className="w-full border-t border-gray-300" id="resume" />
-          <div className="w-full flex justify-center mb-16">
-            <Modal>
-              <a href="resume.pdf" target="_blank">
-                <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
-                  <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-                    <strong>Resume</strong>
-                  </span>
-                  <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
-                    🧰
-                  </div>
-                </ModalTrigger>
-              </a>
-            </Modal>
-          </div>
-        </main>
-
-        {/* Footer */}
-        <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm lg:text-base p-4">
-          <p>Built with Next.js and Tailwind CSS, and deployed to Firebase!</p>
-        </footer>
-      </div>
-    </div>
+    </FunkContext.Provider>
   );
 }
