@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import confetti from "canvas-confetti";
 
 import {
@@ -9,6 +9,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import { FunkContext } from '@/app/page';
 
 var sfxCounter = 0;
 
@@ -23,7 +24,9 @@ export const AnimatedTooltip = ({
     href: string;
   }[];
 }) => {
+  const { isFunkEnabled: isAudioEnabled } = useContext(FunkContext);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [audioInitialized, setAudioInitialized] = useState(false);
   const springConfig = { stiffness: 100, damping: 5 };
   const musicDict: { [key: number]: string } = {
     0: "/sfx/sfx_1.mp3",
@@ -35,7 +38,19 @@ export const AnimatedTooltip = ({
     6: "/sfx/sfx_medium.mp3",
     7: "/sfx/sfx_big.mp3",
   }
+
+  React.useEffect(() => {
+    const enableAudio = () => {
+      setAudioInitialized(true);
+      document.removeEventListener('click', enableAudio);
+    };
+    document.addEventListener('click', enableAudio);
+    return () => document.removeEventListener('click', enableAudio);
+  }, []);
+
   const playSFX = () => {
+    if (!audioInitialized || !isAudioEnabled) return;
+    
     if (sfxCounter == 8) {
       sfxCounter = 0;
     }
@@ -86,7 +101,7 @@ export const AnimatedTooltip = ({
     <>
       {items.map((item) => (
         <div
-          className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2"
+          className="-mr-4 lg:-mr-0 lg:mb-1 relative group mx-7 lg:mx-0 lg:my-2 allow:autoplay"
           key={item.name}
           onMouseEnter={() => { setHoveredIndex(item.id), playSFX() }}
           onMouseLeave={() => setHoveredIndex(null)}

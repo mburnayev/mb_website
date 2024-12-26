@@ -78,3 +78,43 @@ body {
   overflow-x: hidden;
   max-width: 100%;
 }
+
+@keyframes rainbow-text {
+  0%, 100% {
+    color: #ff0000;
+  }
+  14% {
+    color: #ff8000;
+  }
+  28% {
+    color: #ffff00;
+  }
+  42% {
+    color: #00ff00;
+  }
+  56% {
+    color: #00ffff;
+  }
+  70% {
+    color: #0000ff;
+  }
+  84% {
+    color: #8000ff;
+  }
+}
+
+@keyframes rainbow-text-initial {
+  0% {
+    color: #000000;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+.animate-rainbow-text {
+  animation: 
+    rainbow-text-initial 1s linear,
+    rainbow-text 20s linear infinite;
+  animation-delay: 0s, 1s;
+}

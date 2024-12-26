@@ -110,6 +110,7 @@ const config = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        "rainbow-text": "rainbow-text 5s linear infinite",
       },
     },
   },
