@@ -9,7 +9,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { FunkContext } from '@/app/page';
+import { FunkContext } from "@/contexts/FunkContext";
 
 var sfxCounter = 0;
 

@@ -1,14 +1,10 @@
 "use client";
-import { useState, createContext } from "react";
+import { useState } from "react";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { BackgroundLines } from "@/components/ui/background-lines";
 import { Modal, ModalTrigger } from "@/components/ui/animated-modal";
-
-export const FunkContext = createContext({
-  isFunkEnabled: false,
-  setIsFunkEnabled: (enabled: boolean) => {}
-});
+import { FunkContext } from "@/contexts/FunkContext";
 
 const tooltipLinks = [
   {
