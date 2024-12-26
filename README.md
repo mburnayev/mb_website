@@ -1,4 +1,4 @@
-# [mburnayev-website](misha.burnayev.com)
+# [mburnayev-website](https://misha.burnayev.com)
 This webpage was created to record my progression as a software developer and portfolio feats I have accomplished, including this project itself.
 
 ## Project Overview
@@ -36,7 +36,7 @@ Rework funky website accordingly | SFX (re)added, BackgroundLines component (re)
 Test funky website on different browsers (desktop and mobile) | - |  ✅
 Deploy website | - | ✅
 Fix website deployment | ~~It's publicly available, but I get an incompatible Node version error?~~ Website deployment fixed! | ✅
-Add vanity URL | original URL is [mburnayev-website.web.app](mburnayev-website.web.app), but [this one](misha.burnayev.com) will be the one I present and the one people will (usually) see  | ✅
+Add vanity URL | original URL is [mburnayev-website.web.app](https://mburnayev-website.web.app), but [this one](https://misha.burnayev.com) will be the one I present and the one people will (usually) see  | ✅
 Add mobile broswer support | - | ✅
 
 ## Miscellaneous
