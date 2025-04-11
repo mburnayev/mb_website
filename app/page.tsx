@@ -274,6 +274,33 @@ const IFGDBButtons = [
   }
 ]
 
+const YTButtons = [
+  {
+    name: "JavaScript",
+    bgcolor: "#FFEF84",
+    txcolor: "#000000",
+    icon: "images/javascript_logo.png"
+  },
+  {
+    name: "YouTube API",
+    bgcolor: "#FF8888",
+    txcolor: "#000000",
+    icon: "images/youtube_logo.png"
+  },
+  {
+    name: "Git",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "images/git_logo.png"
+  },
+  {
+    name: "Node.JS",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "images/nodejs_logo.webp"
+  }
+]
+
 const workCards = [
   {
     title: "Software Engineering Intern @ ST Engineering iDirect",
@@ -305,7 +332,26 @@ const workCards = [
   },
 ]
 
-const projectCards = [
+const bigProjectCards = [
+
+  {
+    title: "CF3K (CatFinderinator3000)",
+    subtext: "August - December 2024",
+    description: "A multidiscipline project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
+    link: "https://github.com/mburnayev/CatFinderinator3000",
+    skillIcons: CF3KButtons
+  },
+
+]
+
+const smallProjectCards = [
+  {
+    title: "YT Channel Viewtime Calculator",
+    subtext: "March 2025",
+    description: "Made to gather empirical data for a hypothetical on whether you'd watch all of Sesame Street or Annoying Orange, this was another project with humorous roots. First iteration completed in the better part of an evening.",
+    link: "https://github.com/mburnayev/yt-calc-channel-viewtime",
+    skillIcons: YTButtons
+  },
   {
     title: "misha.burnayev.com",
     subtext: "November - December 2024",
@@ -314,19 +360,13 @@ const projectCards = [
     skillIcons: websiteButtons
   },
   {
-    title: "CatFinderinator3000 (CF3K)",
-    subtext: "August - December 2024",
-    description: "A multidiscipline project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
-    link: "https://github.com/mburnayev/CatFinderinator3000",
-    skillIcons: CF3KButtons
-  },
-  {
     title: "IFGDB (Intrusive Family Guy Discord Bot)",
     subtext: "October 2024",
     description: "This was a quick (but fully functional) project I made in a weekend after a friend jokingly suggested it — it's a Discord bot that automatically connects to a voice chat if a user joins, plays a short audio clip from Family Guy, and disconnects.",
     link: "https://github.com/mburnayev/IFGDBot",
     skillIcons: IFGDBButtons
   },
+
 ]
 
 export default function Home() {
@@ -378,53 +418,56 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <BackgroundLines> 
-        <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20 overflow-x-hidden">
-          <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
-            <h1 id="about"></h1>
-            {/* Big Name */}
-            <div className="relative w-full flex items-center lg:justify-start justify-center">
-              <h1 className={`text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative text-center
+        <BackgroundLines>
+          <div className="flex-1 grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-4 lg:p-8 pb-20 lg:pb-20 sm:p-20 overflow-x-hidden">
+            <main className="flex flex-col gap-8 row-start-2 items-center lg:items-start mx-4 lg:ml-[5%] lg:mr-[25%]">
+              <h1 id="about"></h1>
+              {/* Big Name */}
+              <div className="relative w-full flex items-center lg:justify-start justify-center">
+                <h1 className={`text-4xl lg:text-8xl font-bold font-[family-name:var(--font-magic-bubble)] relative text-center
                 ${isAudioEnabled ? "animate-rainbow-text" : ""}`}>
-                Misha Burnayev
-              </h1>
-            </div>
+                  Misha Burnayev
+                </h1>
+              </div>
 
-            {/* Elevator Pitch */}
-            <p className="text-lg lg:text-2xl">
-              <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
-              I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
-              I currently hold a bachelor's degree in Computer Science with a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
-            </p>
-            {/* Work */}
-            <h6 className="w-full border-t border-gray-300" id="work" />
-            <HoverEffect className="mx-auto w-full" items={workCards} />
-            {/* Projects */}
-            <h6 className="w-full border-t border-gray-300" id="projects" />
-            <HoverEffect className="mx-auto w-full" items={projectCards} />
-            {/* Moneymaker */}
-            <h6 className="w-full border-t border-gray-300" id="resume" />
-            <div className="w-full flex justify-center mb-16">
-              <Modal>
-                <a href="resume.pdf" target="_blank">
-                  <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
-                    <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
-                      <strong>Resume</strong>
-                    </span>
-                    <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
-                      🧰
-                    </div>
-                  </ModalTrigger>
-                </a>
-              </Modal>
-            </div>
-          </main>
+              {/* Elevator Pitch */}
+              <p className="text-lg lg:text-2xl">
+                <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
+                I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
+                I currently hold a bachelor's degree in Computer Science with a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
+              </p>
+              {/* Work */}
+              <h6 className="w-full border-t border-gray-300" id="work" />
+              <HoverEffect className="mx-auto w-full" items={workCards} />
+              {/* Big Projects */}
+              <h6 className="w-full border-t border-gray-300" id="projects" />
+              <HoverEffect className="mx-auto w-full" items={bigProjectCards} />
+              {/* Bargain Bin Projects */}
+              <h6 className="w-full border-t border-gray-300" id="smallProjects" />
+              <HoverEffect className="mx-auto w-full" items={smallProjectCards} />
+              {/* Moneymaker */}
+              <h6 className="w-full border-t border-gray-300" id="resume" />
+              <div className="w-full flex justify-center mb-16">
+                <Modal>
+                  <a href="resume.pdf" target="_blank">
+                    <ModalTrigger className="bg-white flex justify-center group/modal-btn rounded-full pl-10 pr-10 py-5 border-2 border-black">
+                      <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                        <strong>Resume</strong>
+                      </span>
+                      <div className="translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute transition duration-500 text-white">
+                        🧰
+                      </div>
+                    </ModalTrigger>
+                  </a>
+                </Modal>
+              </div>
+            </main>
 
-          {/* Footer */}
-          <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm lg:text-base p-4">
+            {/* Footer */}
+            {/* <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center text-sm lg:text-base p-4">
             <p>Built with Next.js and Tailwind CSS, and deployed to Firebase!</p>
-          </footer>
-        </div>
+          </footer> */}
+          </div>
         </BackgroundLines>
       </div>
     </FunkContext.Provider>
