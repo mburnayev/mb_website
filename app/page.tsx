@@ -66,7 +66,7 @@ const iDirectButtons = [
     name: "Docker",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "images/docker_logo.webp"
+    icon: "images/docker_logo.png"
   }
 ]
 
@@ -81,7 +81,7 @@ const researchButtons = [
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "images/python_logo.svg"
+    icon: "images/python_logo.png"
   },
   {
     name: "OpenMV",
@@ -93,7 +93,7 @@ const researchButtons = [
     name: "OpenCV",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "images/opencv_logo.webp"
+    icon: "images/opencv_logo.png"
   }
 ]
 
@@ -102,7 +102,7 @@ const DSButtons = [
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "images/python_logo.svg"
+    icon: "images/python_logo.png"
   },
   {
     name: "R",
@@ -117,7 +117,7 @@ const CSButtons = [
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "images/python_logo.svg"
+    icon: "images/python_logo.png"
   },
   {
     name: "Java",
@@ -133,6 +133,51 @@ const CSButtons = [
   }
 ]
 
+const GCButtons = [
+  {
+    name: "Next.JS",
+    bgcolor: "#888888",
+    txcolor: "#000000",
+    icon: "images/nextjs_logo.png"
+  },
+  {
+    name: "TypeScript",
+    bgcolor: "#73A5DD",
+    txcolor: "#000000",
+    icon: "images/typescript_logo.png"
+  },
+    {
+    name: "Firebase Studio",
+    bgcolor: "#FFDC68",
+    txcolor: "#000000",
+    icon: "images/studio_logo.png"
+  },
+  {
+    name: "Supabase",
+    bgcolor: "#00FF8C",
+    txcolor: "#000000",
+    icon: "images/supabase_logo.png"
+  },
+  {
+    name: "Cloudflare Workers AI",
+    bgcolor: "#FFC573",
+    txcolor: "#000000",
+    icon: "images/cloudflare_logo.png"
+  },
+  {
+    name: "Gemini",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "images/gemini_logo.png"
+  },
+    {
+    name: "Firebase",
+    bgcolor: "#FFFFFF",
+    txcolor: "#000000",
+    icon: "images/firebase_logo.png"
+  }
+]
+
 const CF3KButtons = [
   {
     name: "Dart",
@@ -144,25 +189,25 @@ const CF3KButtons = [
     name: "Flutter",
     bgcolor: "#B2E8FF",
     txcolor: "#000000",
-    icon: "images/flutter_logo.webp"
+    icon: "images/flutter_logo.png"
   },
   {
     name: "Python",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "images/python_logo.svg"
+    icon: "images/python_logo.png"
   },
   {
     name: "PyTorch",
     bgcolor: "#D5A9A0",
     txcolor: "#000000",
-    icon: "images/pytorch_logo.webp"
+    icon: "images/pytorch_logo.png"
   },
   {
     name: "OpenCV",
     bgcolor: "#A8A8A8",
     txcolor: "#000000",
-    icon: "images/opencv_logo.webp"
+    icon: "images/opencv_logo.png"
   },
   {
     name: "Git",
@@ -189,7 +234,7 @@ const websiteButtons = [
     name: "Next.JS",
     bgcolor: "#888888",
     txcolor: "#000000",
-    icon: "images/nextjs_logo.webp"
+    icon: "images/nextjs_logo.png"
   },
   {
     name: "TypeScript",
@@ -201,7 +246,7 @@ const websiteButtons = [
     name: "HTML",
     bgcolor: "#D5A9A0",
     txcolor: "#000000",
-    icon: "images/html_logo.webp"
+    icon: "images/html_logo.png"
   },
   {
     name: "Tailwind CSS",
@@ -219,7 +264,7 @@ const websiteButtons = [
     name: "Node.JS",
     bgcolor: "#CAE79D",
     txcolor: "#000000",
-    icon: "images/nodejs_logo.webp"
+    icon: "images/nodejs_logo.png"
   },
   {
     name: "Firebase",
@@ -231,7 +276,7 @@ const websiteButtons = [
     name: "Nginx",
     bgcolor: "#FFFFFF",
     txcolor: "#000000",
-    icon: "images/nginx_logo.webp"
+    icon: "images/nginx_logo.png"
   },
   {
     name: "OCI",
@@ -247,59 +292,6 @@ const websiteButtons = [
   }
 ]
 
-const IFGDBButtons = [
-  {
-    name: "JavaScript",
-    bgcolor: "#FFEF84",
-    txcolor: "#000000",
-    icon: "images/javascript_logo.png"
-  },
-  {
-    name: "Discord API",
-    bgcolor: "#9DA5FF",
-    txcolor: "#000000",
-    icon: "images/discord_logo.png"
-  },
-  {
-    name: "Git",
-    bgcolor: "#FFFFFF",
-    txcolor: "#000000",
-    icon: "images/git_logo.png"
-  },
-  {
-    name: "Node.JS",
-    bgcolor: "#FFFFFF",
-    txcolor: "#000000",
-    icon: "images/nodejs_logo.webp"
-  }
-]
-
-const YTButtons = [
-  {
-    name: "JavaScript",
-    bgcolor: "#FFEF84",
-    txcolor: "#000000",
-    icon: "images/javascript_logo.png"
-  },
-  {
-    name: "YouTube API",
-    bgcolor: "#FF8888",
-    txcolor: "#000000",
-    icon: "images/youtube_logo.png"
-  },
-  {
-    name: "Git",
-    bgcolor: "#FFFFFF",
-    txcolor: "#000000",
-    icon: "images/git_logo.png"
-  },
-  {
-    name: "Node.JS",
-    bgcolor: "#FFFFFF",
-    txcolor: "#000000",
-    icon: "images/nodejs_logo.webp"
-  }
-]
 
 const workCards = [
   {
@@ -333,24 +325,19 @@ const workCards = [
 ]
 
 const bigProjectCards = [
-
+  {
+    title: "Gleep Corral",
+    subtext: "June - September 2025",
+    description: "Born out of the desire to prevent skill stagnation (and to have fun with AI), this project uses state-of-the-art AI generation models to produce decent slop!\n\nThe webapp calls a Supabase Edge Function proxy for calling text and image generation models while showing a nice buffering animation until the model callbacks complete and deliver a fine swine before thine eyes.  ",
+    link: "https://github.com/mburnayev/gleep-corral",
+    skillIcons: GCButtons
+  },
   {
     title: "CF3K (CatFinderinator3000)",
     subtext: "August - December 2024",
-    description: "A multidiscipline project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
+    description: "A multifaceted project made to automate the process of recording and uploading cat videos.\n\nThis is accomplished using a RPi with PyTorch on it to set up a script that uses a MobileNetV2 model to detect cats, and when a cat is detected, a short video is recorded and uploaded to the cloud.\n\nOn the other end of the system, my publicly available Flutter App then pulls the videos from the cloud and makes them viewable.",
     link: "https://github.com/mburnayev/CatFinderinator3000",
     skillIcons: CF3KButtons
-  },
-
-]
-
-const smallProjectCards = [
-  {
-    title: "YT Channel Viewtime Calculator",
-    subtext: "March 2025",
-    description: "Made to gather empirical data for a hypothetical on whether you'd watch all of Sesame Street or Annoying Orange, this was another project with humorous roots. First iteration completed in the better part of an evening.",
-    link: "https://github.com/mburnayev/yt-calc-channel-viewtime",
-    skillIcons: YTButtons
   },
   {
     title: "misha.burnayev.com",
@@ -358,13 +345,6 @@ const smallProjectCards = [
     description: "*This* website — as you can probably tell, this primarily serves as a portfolio of experiences pertaining to my career.\n\nDesigned with Next to use some of the pre-built components that looked cool, but I expanded the project scope to get the functionality I wanted as this project was made under a Google organization and Firebase changed their free tier policies.",
     link: "https://github.com/mburnayev/mb_website",
     skillIcons: websiteButtons
-  },
-  {
-    title: "IFGDB (Intrusive Family Guy Discord Bot)",
-    subtext: "October 2024",
-    description: "This was a quick (but fully functional) project I made in a weekend after a friend jokingly suggested it — it's a Discord bot that automatically connects to a voice chat if a user joins, plays a short audio clip from Family Guy, and disconnects.",
-    link: "https://github.com/mburnayev/IFGDBot",
-    skillIcons: IFGDBButtons
   },
 
 ]
@@ -432,9 +412,10 @@ export default function Home() {
 
               {/* Elevator Pitch */}
               <p className="text-lg lg:text-2xl">
-                <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br>
+                {/* <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and an <i>excellent</i> hire for any Software Engineering, Machine Learning, or related roles this coming summer of 2025.<br></br><br></br> */}
+                <strong>Hello!</strong> I'm a philomath by heart, a software engineer by trade, and currently employed as a Full-Stack Cloud Developer at Excalibur Solutions.<br></br><br></br>
                 I love learning, picking up new hobbies, and creating projects when I see opportunities to apply my knowledge. Out of my many interests, programming is my favorite since it's an excellent medium for effectively bringing ideas to life with a perpetually evolving toolkit, giving you limitless potential to create whatever you want (as long as it uses a computer).<br></br><br></br>
-                I currently hold a bachelor's degree in Computer Science with a minor in Data Science, and I'm a first year master's student at George Mason University studying Software Engineering. I'm usually preoccupied with my schoolwork, but most of my free time goes to developing passion projects or doing one of my hobbies.
+                I hold a bachelor's degree in Computer Science with a minor in Data Science and a master's degree in Software Engineering, all from George Mason University. I'm usually preoccupied with my work, but most of my free time goes to developing passion projects or doing one of my hobbies.
               </p>
               {/* Work */}
               <h6 className="w-full border-t border-gray-300" id="work" />
@@ -442,9 +423,6 @@ export default function Home() {
               {/* Big Projects */}
               <h6 className="w-full border-t border-gray-300" id="projects" />
               <HoverEffect className="mx-auto w-full" items={bigProjectCards} />
-              {/* Bargain Bin Projects */}
-              <h6 className="w-full border-t border-gray-300" id="smallProjects" />
-              <HoverEffect className="mx-auto w-full" items={smallProjectCards} />
               {/* Moneymaker */}
               <h6 className="w-full border-t border-gray-300" id="resume" />
               <div className="w-full flex justify-center mb-16">
