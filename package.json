@@ -17,7 +17,7 @@
     "firebase-tools": "^13.29.1",
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.454.0",
-    "next": "15.0.2",
+    "next": "^15.5.7",
     "react": "18.2.0",
     "react-canvas-confetti": "^2.0.7",
     "react-dom": "18.2.0",
